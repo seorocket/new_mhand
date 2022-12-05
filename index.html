@@ -1,11 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <link rel="stylesheet" href="static/css/main.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Мегахенд</title>
 </head>
 <body>
-
+<header>
+    <div class="container header-container">
+        <div class="location location-modal"><img src="static/images/icons/icons8-location-96.png"> Москва</div>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+        <div class="top-header-right">
+            <div class="phone-section"><img src="static/images/icons/" alt=""><i class="fa-solid fa-phone"></i> <a
+                    href="tel:+78002506168">8(800) 250-61-68</a></div>
+            <div class="btn header-btn">войти</div>
+        </div>
+    </div>
+</header>
+<main>
+    <section>
+        <div class="index">
+            <nav>
+                <div class="container menu-container">
+                    <ul class="main-menu">
+                        <li class="dropdown">
+                            О компании <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="submenu">
+                                <li><a href="#">О компании</a></li>
+                                <li class="sub-dropdown">
+                                    <a href="#" style="display: flex; gap: 5px; align-items: center">Сотрудничество <i
+                                            class="fa-solid fa-chevron-down"></i></a>
+                                    <ul class="sub-submenu">
+                                        <li><a href="#">Арендодателям</a></li>
+                                        <li><a href="#">Оптовикам (ветошь)</a></li>
+                                        <li><a href="#">Реклама у нас</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="stock.html">Акции</a></li>
+                        <li><a href="collection.html">Наши коллекции</a></li>
+                        <li><a href="brands.html">Бренды</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="vacancy.html">Вакансии</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container landing-block">
+                <div class="calendar-section">
+                    <div class="small-calendar calendar">
+                        <div class="header-calendar">
+                            <img src="static/images/icons/ic-share.png" class="share-btn">
+                            <p>календарь скидок</p>
+                        </div>
+                        <div class="body-calendar small">
+                            <div class="all-sale">
+                                <div class="sale-item active">
+                                    <div class="sale-item-header">
+                                        <p>3</p>
+                                        <p>вт</p>
+                                    </div>
+                                    <div class="count-sale">70%</div>
+                                </div>
+                                <div class="sale-item">
+                                    <div class="sale-item-header">
+                                        <p>4</p>
+                                        <p>ср</p>
+                                    </div>
+                                    <div class="count-sale">70%</div>
+                                </div>
+                                <div class="sale-item">
+                                    <div class="sale-item-header">
+                                        <p>5</p>
+                                        <p>чт</p>
+                                    </div>
+                                    <div class="count-sale">70%</div>
+                                </div>
+                                <div class="sale-item">
+                                    <div class="sale-item-header">
+                                        <p>6</p>
+                                        <p>пт</p>
+                                    </div>
+                                    <div class="count-sale">70%</div>
+                                </div>
+                            </div>
+                            <div class="current-sale-item swiper-sale-calendar swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">понедельник</p>
+                                        <p class="date">
+                                            <span class="prev-sale-arrow slider-arrows-prev"></span>
+                                            2 января
+                                            <span class="next-sale-arrow slider-arrows-next"></span>
+                                        </p>
+                                        <p class="sale">70%</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">понедельник</p>
+                                        <p class="date">
+                                            <span class="prev-sale-arrow slider-arrows-prev"></span>
+                                            3 января
+                                            <span class="next-sale-arrow slider-arrows-next"></span>
+                                        </p>
+                                        <p class="sale">70%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shops shops-swiper swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="shop-item swiper-slide">
+                                        <span class="prev-shops-calendar-arrow"></span>
+                                        <p>Г.ТОЛЬЯТТИ, УЛ.МИРА, 62,
+                                            ТЦ “МИНДАЛЬ”</p>
+                                        <span class="next-shops-calendar-arrow"></span>
+                                    </div>
+                                    <div class="shop-item swiper-slide">
+                                        <span class="prev-shops-calendar-arrow"></span>
+                                        <p>Г.ТОЛЬЯТТИ, УЛ.МИРА, 62,
+                                            ТЦ “МИНДАЛЬ”</p>
+                                        <span class="next-shops-calendar-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn calendar-btn">весь календарь</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="landing-section">
+                    <img src="static/images/background-girl1.png" alt="">
+                    <div class="landing-text">
+                        <p>Новая Коллекция Осень-Зима 2022</p>
+                        <div class="landing-tag">#new collection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container coupon-btn-section">
+            <div class="coupon-btn btn">получить купон на 500р</div>
+        </div>
+    </section>
+    <section>
+        <div class="container category">
+            <div class="block-category">
+                <p>для неё</p>
+                <a href="#" class="btn category-btn">
+                    женская коллекция
+                </a>
+            </div>
+            <div class="block-category">
+                <p>для него</p>
+                <a href="#" class="btn category-btn">
+                    мужская коллекция
+                </a>
+            </div>
+            <div class="block-category">
+                <p>для детей</p>
+                <a href="#" class="btn category-btn">
+                    детская коллекция
+                </a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="stock-container container">
+            
+        </div>
+    </section>
+</main>
+<footer></footer>
+<script src="static/js/sliders.js"></script>
+<script src="static/js/index.js"></script>
 </body>
 </html>
