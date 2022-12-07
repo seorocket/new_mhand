@@ -44,9 +44,9 @@ header {
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 .header-container .location {
@@ -258,6 +258,7 @@ nav {
 
 .calendar-section .calendar {
     position: relative;
+    z-index: 2;
 }
 
 .header-calendar .share-btn {
@@ -1112,13 +1113,396 @@ nav {
     height: 100%;
 }
 
-section.map{
+section.map {
     position: relative;
 }
 
-.shops-data{
+.shops-data {
     padding: 40px 30px;
     background: var(--white);
     position: absolute;
     z-index: 2;
+    top: 50%;
+    left: 200px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.shops-data .shops-data-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--tab-black);
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+}
+
+.shops-data .shops-data-title:after {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: var(--yellow);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.shops-data .shop-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.shops-data .shop-data .shop-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 250px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #464646;
+}
+
+.shops-data .shop-data .shop-item .shop-ico {
+    width: 22px;
+    height: 22px;
+}
+
+.btn.in-map {
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 30px;
+    background-color: var(--tab-black);
+    color: var(--white);
+}
+
+footer {
+    background-color: #1C1C1C;
+    color: var(--white);
+}
+
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 0 45px 0;
+}
+
+.main-footer .footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer .footer-header .footer-logo {
+    height: 76px;
+    width: auto;
+}
+
+.main-footer .footer-header .footer-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-main {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+nav.footer {
+    width: 55%;
+    padding-right: 60px;
+    border-right: 1px solid #696969;
+}
+
+nav.footer ul li,
+nav.footer ul li a {
+    list-style: none;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+nav.footer ul.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav.footer ul.footer-menu li {
+    font-weight: 500;
+}
+
+nav.footer ul.footer-menu .footer-sub-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+nav.footer ul.footer-menu .footer-sub-menu li {
+    font-weight: 300;
+}
+
+.social-bloc {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.footer-email-input {
+    width: 100%;
+    position: relative;
+}
+
+.footer-email-input .footer-email {
+    border: 1px solid #545454;
+    padding: 10px 25px;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #828282;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    width: 100%;
+    outline: none;
+}
+
+.footer-email-input button {
+    position: absolute;
+    padding: 12px;
+    color: var(--tab-black);
+    background: var(--yellow);
+    outline: none;
+    border: none;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 200px;
+}
+
+.footer-social-links p {
+    font-size: 24px;
+    line-height: 39px;
+    color: var(--yellow);
+    font-weight: 400;
+    font-family: 'News Cycle', sans-serif;
+}
+
+.footer-social-links .social-links {
+    display: flex;
+    gap: 30px;
+}
+
+.social-links .social-links-item {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.social-links .social-links-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.cooperation-footer {
+    padding: 40px;
+    background: #141414;
+}
+
+
+.cooperation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-author,
+.footer-privacy {
+    color: #949494;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-cooperation {
+    color: var(--white);
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-privacy {
+    text-transform: uppercase;
+}
+
+.close-icon {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
+
+.big-calendar-item-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.prev-sale-arrow.slider-arrows-prev.big,
+.next-sale-arrow.slider-arrows-next.big {
+    background-color: var(--tab-black);
+    cursor: pointer;
+}
+
+.prev-sale-arrow.slider-arrows-prev.big:before,
+.next-sale-arrow.slider-arrows-next.big:before {
+    background-color: var(--tab-black);
+    cursor: pointer;
+}
+
+.prev-sale-arrow.slider-arrows-prev.big:after,
+.next-sale-arrow.slider-arrows-next.big:after {
+    background-color: var(--tab-black);
+    cursor: pointer;
+}
+
+.body-calendar.big {
+    padding: 10px;
+}
+
+.big-calendar-item-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.big-calendar-week-section {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+    padding: 8px;
+}
+
+.big-calendar-week-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    line-height: 11px;
+    color: var(--tab-black);
+    font-weight: 600;
+}
+
+.big-calendar-date-section {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.big-calendar-day {
+    height: 60px;
+    width: auto;
+    border: 1px solid #DCDCDC;
+    padding: 2px;
+    position: relative;
+}
+
+.big-calendar-day-header {
+    background: var(--tab-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.big-calendar-sale-block {
+    margin-top: 40%;
+    padding: 3px;
+    background: var(--yellow);
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--tab-black);
+    font-weight: 700;
+}
+
+.big-calendar-sale-block span {
+    font-weight: 300;
+}
+
+.big-calendar-new-clothe {
+    color: #e93232;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    margin-top: 40%;
+}
+
+.big-calendar-day.empty {
+    background: rgba(217, 217, 217, 0.7);;
+}
+
+.big-calendar-day.empty .big-calendar-day-header {
+    background: rgba(182, 182, 182, 0.7);
+    color: #fff;
 }

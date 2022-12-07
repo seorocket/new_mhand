@@ -4,6 +4,12 @@ new Swiper('.swiper-sale-calendar', {
         nextEl: '.next-sale-arrow',
     },
 })
+new Swiper('.swiper-sale-big-calendar', {
+    navigation: {
+        prevEl: '.slider-arrows-prev.big',
+        nextEl: '.slider-arrows-next.big',
+    },
+})
 new Swiper('.shops-swiper', {
     navigation: {
         prevEl: '.prev-shops-calendar-arrow',
