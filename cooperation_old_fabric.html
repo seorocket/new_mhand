@@ -1,10 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Мегахенд</title>
 </head>
 <body>
+<header>
+    <div class="container header-container">
+        <div class="location location-modal"><img src="static/images/icons/icons8-location-96.png"> Москва</div>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+        <div class="top-header-right">
+            <div class="phone-section"><img src="static/images/icons/" alt=""><i class="fa-solid fa-phone"></i> <a
+                    href="tel:+78002506168">8(800) 250-61-68</a></div>
+            <div class="btn header-btn">войти</div>
+        </div>
+    </div>
+</header>
+<main>
+    <section>
+        <nav>
+            <div class="container menu-container">
+                <ul class="main-menu">
+                    <li class="dropdown">
+                        О компании <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#">О компании</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#" style="display: flex; gap: 5px; align-items: center">Сотрудничество <i
+                                        class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="sub-submenu">
+                                    <li><a href="#">Арендодателям</a></li>
+                                    <li><a href="#">Оптовикам (ветошь)</a></li>
+                                    <li><a href="#">Реклама у нас</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="stock.html">Акции</a></li>
+                    <li><a href="collection.html">Наши коллекции</a></li>
+                    <li><a href="brands.html">Бренды</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="vacancy.html">Вакансии</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container title-container">
+            <div class="title-block">
+                <p>ОПТОВИКАМ</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container old-fabrics-container">
+            <img src="static/images/vetosh.png" alt="">
+            <div class="old-fabrics-content">
+                <div class="h3">ВЕТОШЬ (х/б)</div>
+                <p>Ветошь - это вторичная х/б ткань, которая используется, как обтирочный материал, для удаления
+                    технических масел, влаги, красителей и грязи с поверхности заготовок, а также для подготовки изделий
+                    под покраску или другие технологические операции.</p>
+                <span>Минимальная партия отпускаемой ветоши - 10 кг</span>
+                <div class="btn about-btn old-fabrics-btn">КУПИТЬ ОТ 800Р</div>
+            </div>
+    </section>
+    <section class="about-page-mailing cooperation">
+        <div class="container about-page-mailing-container">
+            <div class="about-page-mailing-container-content">
+                <div class="title yelow">
+                    ОСТАВИТЬ ЗАЯВКУ НА ПОКУПКУ ВЕТОШИ ОПТОМ
+                </div>
 
+            </div>
+            <div class="about-page-mailing-container-form">
+                <div class="custom-input-block">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" class="form-custom-input name" placeholder="Введите Ваше Имя">
+                </div>
+                <div class="custom-input-block">
+                    <label for="email">Телефон</label>
+                    <input type="text" id="email" class="form-custom-input phone" placeholder="8916-xxx-xx-x6">
+                </div>
+                <button type="submit" class="btn subscribe-btn">Оставить заявку</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container about-old-fabrics-container">
+            <div class="about-old-fabrics-content">
+                <p>Более детально ознакомиться с продукцией и узнать её стоимость Вы можете из оставив заявку.
+                    Для Вашего удобства для каждой товарной группы представлен свой прайс-лист, который будет Вам предоставлен нашими менеджерами.
+                    Оформление заявки займет всего несколько минут.
+                </p>
+                <img src="static/images/vet.png" alt="">
+                <p>Главная оценка качества ветоши технической, хб — это гигроскопичность, мягкость материала и прочность. Изготавливается ветошь из 100% хлопка. От содержании хлопка в материале зависит ее гигроскопичность. Структура должна быть цельной, прочной, без повреждений, разрывов и другого брака. Когда покупается ветошь, главным при выборе является размер. Длина узкой стороны лоскута должна быть не менее 20 см, а длинная сторона лоскута не ограничивается в размерах. При таких размерах проще работать с материалом.От содержании хлопка в материале зависит ее гигроскопичность. Структура должна быть цельной, прочной, без повреждений, разрывов и другого брака. Когда покупается ветошь, главным при выборе является размер. Длина узкой стороны лоскута должна быть не менее 20 см, а длинная сторона лоскута не ограничивается в размерах. При таких размерах проще работать с материалом.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container footer-container">
+        <div class="main-footer">
+            <div class="footer-header">
+                <div class="footer-logo"><img src="static/images/logo.png" alt=""></div>
+            </div>
+            <div class="footer-main">
+                <nav class="footer">
+                    <ul class="footer-menu">
+                        <li><a href="#">
+                            О компании
+                            <ul class="footer-sub-menu">
+                                <li><a href="#">Сотрудничество</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                        </a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Бренды</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </nav>
+                <div class="social-bloc">
+                    <div class="footer-email-input">
+                        <input type="email" name="email" placeholder="ПОДПИСАТЬСЯ НА РАССЫЛКУ"
+                               class="email footer-email">
+                        <button type="submit">подписаться</button>
+                    </div>
+                    <div class="footer-social-links">
+                        <p>#megahand</p>
+                        <div class="social-links">
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-tel.png">
+                            </div>
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-vk.png">
+                            </div>
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-youtube.png">
+                            </div>
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-odn.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cooperation-footer">
+        <div class="container cooperation-container">
+            <p class="footer-author">Редизайн- SEORocket 2022 by Студия сайтов</p>
+            <p class="footer-cooperation">2022 © МЕГАХЕНД - интернет магазин</p>
+            <a href="#" class="footer-privacy">политика конфиденциальности</a>
+        </div>
+    </div>
+
+</footer>
+<script src="static/js/sliders.js"></script>
+<script src="static/js/index.js"></script>
 </body>
 </html>

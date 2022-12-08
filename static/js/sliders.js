@@ -10,6 +10,12 @@ new Swiper('.swiper-sale-big-calendar', {
         nextEl: '.slider-arrows-next.big',
     },
 })
+new Swiper('.stock-page-swiper', {
+    navigation: {
+        prevEl: '.slider-arrows-prev.stocks',
+        nextEl: '.slider-arrows-next.stocks',
+    },
+})
 new Swiper('.shops-swiper', {
     navigation: {
         prevEl: '.prev-shops-calendar-arrow',
