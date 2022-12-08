@@ -2114,13 +2114,94 @@ section.stocks {
 
 .our-collection-images{
     display: flex;
-    gap: 10px;
+    /*gap: 10px;*/
 }
 
 .our-collection-images-item{
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    object-fit: cover;
+}
+
+.our-collection-images .img-block-collection{
+    position: relative;
     width: 65px;
     max-height: 450px;
-    object-fit: cover;
     cursor: pointer;
     transition: all .3s ease-in-out;
+}
+
+
+.our-collection-images .img-block-collection:hover:before{
+    background: transparent;
+}
+.our-collection-images .img-block-collection:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: .3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+
+}
+
+section.tabs-section{
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.toggle-tabs{
+    position: absolute;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -40px;
+    top: -10px;
+}
+
+.arrows-toggle-tabs{
+    width: 2px;
+    height: 50px;
+    background: var(--tab-black);
+    position: relative;
+    cursor: pointer;
+}
+
+.arrows-toggle-tabs:before{
+    content: '';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    left: -2px;
+    top: 3px;
+    background: var(--tab-black);
+    transform: rotate(65deg);
+    cursor: pointer;
+}
+
+.arrows-toggle-tabs:after{
+    content: '';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    right: -2px;
+    top: 3px;
+    background: var(--tab-black);
+    transform: rotate(-65deg);
+    cursor: pointer;
+}
+
+.stock-container.container .tabs-section .tabs__caption li{
+    text-transform: uppercase;
+    text-align: center;
+    width: 120px;
+}
+
+.stock-container.container .tabs-section .tabs__caption {
+    left: -190px;
 }
