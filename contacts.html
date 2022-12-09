@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Мегахенд</title>
+</head>
+<body>
+<header>
+    <div class="container header-container">
+        <div class="location location-modal"><img src="static/images/icons/icons8-location-96.png"> Москва</div>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+        <div class="top-header-right">
+            <div class="phone-section"><img src="static/images/icons/" alt=""><i class="fa-solid fa-phone"></i> <a
+                    href="tel:+78002506168">8(800) 250-61-68</a></div>
+            <div class="btn header-btn">войти</div>
+        </div>
+    </div>
+</header>
+<main>
+    <section>
+        <nav>
+            <div class="container menu-container">
+                <ul class="main-menu">
+                    <li class="dropdown">
+                        О компании <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#">О компании</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#" style="display: flex; gap: 5px; align-items: center">Сотрудничество <i
+                                        class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="sub-submenu">
+                                    <li><a href="#">Арендодателям</a></li>
+                                    <li><a href="#">Оптовикам (ветошь)</a></li>
+                                    <li><a href="#">Реклама у нас</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="stock.html">Акции</a></li>
+                    <li><a href="collection.html">Наши коллекции</a></li>
+                    <li><a href="brands.html">Бренды</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="vacancy.html">Вакансии</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <div class="container contacts-container">
+            <div class="title-block">
+                <p>Контакты</p>
+            </div>
+            <div class="filter-contact-section">
+                <div class="search-contacts-city-section">
+                    <div class="search-select-section">
+                        <select class="contact-select-region" name="region" placeholder="Выбрать регион">
+                            <option></option>
+                            <option>Самарская область</option>
+                            <option>Московская область</option>
+                            <option>Ленинградская область</option>
+                        </select>
+                        <select class="contact-select-city" name="city" placeholder="Выбрать город">
+                            <option></option>
+                            <option value="367">Абаза</option>
+                            <option value="340">Абакан</option>
+                            <option value="369">Абдулино</option>
+                            <option value="370">Абинск</option>
+                            <option value="371">Агидель</option>
+                        </select>
+                    </div>
+                    <div class="city-filter">
+                        <ul class="city-filter-items">
+                            <li>Все города</li>
+                            <li>А</li>
+                            <li>Б</li>
+                            <li>В</li>
+                            <li>Г</li>
+                            <li>Д</li>
+                            <li>Е</li>
+                            <li>Ж</li>
+                            <li>З</li>
+                            <li>И</li>
+                            <li>Й</li>
+                            <li>К</li>
+                            <li>Л</li>
+                            <li>М</li>
+                            <li>Н</li>
+                            <li>О</li>
+                            <li>П</li>
+                            <li>Р</li>
+                            <li>С</li>
+                            <li>Т</li>
+                            <li>У</li>
+                            <li>Ф</li>
+                            <li>Х</li>
+                            <li>Ц</li>
+                            <li>Ч</li>
+                            <li>Ш</li>
+                            <li>Э</li>
+                            <li>Я</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="tel:+78002506168" class="help-number-section">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="help-number-section-text">
+                        <span>справочная служба</span>
+                        <p>8(800) 250-61-68</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="map" id="map">
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8f2fb0bb059825d228cc66ce2e5b7b9ace9725272786db770aca3ed15da85349&amp;width=100%25&amp;height=1000&amp;lang=ru_RU&amp;scroll=false"></script>
+    </section>
+    <section class="address-section">
+        <div class="container contacts-address-container">
+            <div class="region-section">
+                <div class="region-title">Актюбинская область</div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="region-section">
+                <div class="region-title">Актюбинская область</div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="region-section">
+                <div class="region-title">Актюбинская область</div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+                <div class="address-content">
+                    <div class="address-item">
+                        <div class="address address-item-content">Актобе, ул. Тольятти, 4, 2 этаж</div>
+                        <div class="contact-phone address-item-content">8(800) 250-61-68</div>
+                        <div class="contact-email address-item-content">megahand@yandex.ru</div>
+                        <div class="work-time address-item-content"><i class="fa-solid fa-clock"></i> 09.00-21.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container footer-container">
+        <div class="main-footer">
+            <div class="footer-header">
+                <div class="footer-logo"><img src="static/images/logo.png" alt=""></div>
+            </div>
+            <div class="footer-main">
+                <nav class="footer">
+                    <ul class="footer-menu">
+                        <li><a href="#">
+                            О компании
+                            <ul class="footer-sub-menu">
+                                <li><a href="#">Сотрудничество</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                        </a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Бренды</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </nav>
+                <div class="social-bloc">
+                    <div class="footer-email-input">
+                        <input type="email" name="email" placeholder="ПОДПИСАТЬСЯ НА РАССЫЛКУ"
+                               class="email footer-email">
+                        <button type="submit">подписаться</button>
+                    </div>
+                    <div class="footer-social-links">
+                        <p>#megahand</p>
+                        <div class="social-links">
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-tel.png">
+                            </div>
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-vk.png">
+                            </div>
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-youtube.png">
+                            </div>
+                            <div class="social-links-item">
+                                <img src="static/images/icons/ic-odn.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cooperation-footer">
+        <div class="container cooperation-container">
+            <p class="footer-author">Редизайн- SEORocket 2022 by Студия сайтов</p>
+            <p class="footer-cooperation">2022 © МЕГАХЕНД - интернет магазин</p>
+            <a href="#" class="footer-privacy">политика конфиденциальности</a>
+        </div>
+    </div>
+
+</footer>
+<script src="static/js/sliders.js"></script>
+<script src="static/js/index.js"></script>
+<!--<script src="static/select2/dist/js/select2.min.js"></script>-->
+<script src="static/select2/dist/js/i18n/ru.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=f69140e6-4f5f-4563-a7b4-d26cfe204ef4&lang=ru_RU"></script>
+<script src="static/js/map.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.contact-select-city').select2(
+            {
+                placeholder: "Выбрать город",
+                allowClear: true,
+                width: '50%',
+                language: "ru"
+            }
+        );
+        $('.contact-select-region').select2({
+            placeholder: "Выбрать регион",
+            allowClear: true,
+            width: '50%',
+            language: "ru"
+        });
+    });
+</script>
+
+</body>
+</html>

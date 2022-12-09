@@ -41,4 +41,38 @@ $(document).ready(function () {
         }
     })
 
+    $('.search-container.brands input').on('input', function() {
+        let temp = $(this).val()
+        if (temp) {
+            $('.container.brands-page-container .brands-section .brand-item').each(function () {
+                if ($(this).attr('data-search').toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                    $(this).removeClass('d-none')
+                } else {
+                    $(this).addClass('d-none')
+                }
+            })
+        } else {
+            $('.container.brands-page-container .brands-section .brand-item').each(function () {
+                $(this).removeClass('d-none')
+            })
+        }
+    })
+    $('.search-container.brands .search-btn-brands').on('click', function () {
+        let input = $(this).prev(),
+            temp = input.val()
+        if (temp) {
+            $('.container.brands-page-container .brands-section .brand-item').each(function () {
+                if ($(this).attr('data-search').toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                    $(this).removeClass('d-none')
+                } else {
+                    $(this).addClass('d-none')
+                }
+            })
+        } else {
+            $('.container.brands-page-container .brands-section .brand-item').each(function () {
+                $(this).removeClass('d-none')
+            })
+        }
+    })
+
 })
