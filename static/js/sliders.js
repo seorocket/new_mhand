@@ -23,7 +23,7 @@ new Swiper('.shops-swiper', {
     },
 })
 new Swiper('.stock-catalog-swiper-women', {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 30,
     observe:true,
     observeParents:true,
@@ -36,9 +36,14 @@ new Swiper('.stock-catalog-swiper-women', {
         el: '.swiper-scrollbar-women-stock',
         draggable: true,
     },
+    breakpoints: {
+        1400:{
+            slidesPerView: 3
+        }
+    }
 })
 new Swiper('.stock-catalog-swiper-man', {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 30,
     observe:true,
     observeParents:true,
@@ -51,9 +56,14 @@ new Swiper('.stock-catalog-swiper-man', {
         el: '.swiper-scrollbar-man-stock',
         draggable: true,
     },
+    breakpoints: {
+        1400:{
+            slidesPerView: 3
+        }
+    }
 })
 new Swiper('.stock-catalog-swiper-child', {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 30,
     observe:true,
     observeParents:true,
@@ -66,6 +76,11 @@ new Swiper('.stock-catalog-swiper-child', {
         el: '.swiper-scrollbar-child-stock',
         draggable: true,
     },
+    breakpoints: {
+        1400:{
+            slidesPerView: 3
+        }
+    }
 })
 new Swiper('.brand-swiper', {
     slidesPerView: 4,

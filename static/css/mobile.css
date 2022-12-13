@@ -1,0 +1,9 @@
+@media screen and (max-width: 1400px) {
+    .stock-container.container .tabs{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .stock-container .tabs__caption{
+        left: 7%;
+    }
+}

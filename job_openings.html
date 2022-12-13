@@ -6,11 +6,9 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="static/jquery-ui/jquery-ui.min.css"/>
+    <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Мегахенд</title>
 </head>
@@ -27,6 +25,230 @@
     </div>
 </header>
 <main>
+    <!--modals-->
+
+    <div class="modal fade" id="mainModal" aria-labelledby="mainModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content coupon">
+                <div class="modal-header coupon">
+                    <div class="modal-title" id="couponModalLabel">СКИДОЧНЫЙ КУПОН</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs">
+                        <ul class="tabs__caption">
+                            <li class="active">ПОЛУЧИ 300 РУБ.</li>
+                            <li>ПОЛУЧИ 500 РУБ.</li>
+                        </ul>
+                        <div class="tabs__content active">
+                            <div class="coupon-header">
+                                <div class="coupon-title">
+                                    ПОЛУЧИТЕ 300 РУБЛЕЙ
+                                </div>
+                                <div class="coupon-description">
+                                    Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую
+                                    покупку с выгодой!
+                                </div>
+                            </div>
+                            <div class="coupon-form">
+                                <div class="coupon-inputs">
+                                    <input type="text" class="coupon-input name required" name="name"
+                                           placeholder="Алёна">
+                                    <input type="phone" class="coupon-input phone required" name="phone"
+                                           placeholder="+7(123)456-78-90">
+                                    <select class="coupon-input required select-city-coupon" name="city"
+                                            placeholder="Выбрать город">
+                                        <option></option>
+                                        <option value="367">Абаза</option>
+                                        <option value="340">Абакан</option>
+                                        <option value="369">Абдулино</option>
+                                        <option value="370">Абинск</option>
+                                        <option value="371">Агидель</option>
+                                    </select>
+                                </div>
+                                <div class="agreement-coupon-section">
+
+                                    <div class="agreement-custom-input">
+                                        <input type="checkbox" name="agreement" class="agreement required"
+                                               id="agreement-coupon">
+                                        <label for="agreement-coupon">Я ознакомлен(а) с условиями <a
+                                                href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                    </div>
+                                    <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                                </div>
+                                <div class="get-coupon-btn btn">получить</div>
+                            </div>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="coupon-header">
+                                <div class="coupon-title">
+                                    ПОЛУЧИТЕ 500 РУБЛЕЙ
+                                </div>
+                                <div class="coupon-description">
+                                    Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую
+                                    покупку с выгодой!
+                                </div>
+                            </div>
+                            <div class="coupon-form">
+                                <div class="coupon-inputs">
+                                    <input type="text" class="coupon-input name required" name="name"
+                                           placeholder="Ваше имя">
+                                    <input type="phone" class="coupon-input phone required" name="phone"
+                                           placeholder="Ваш Телефон">
+                                    <select class="coupon-input required select-city-coupon" name="city"
+                                            placeholder="Выбрать город">
+                                        <option></option>
+                                        <option value="367">Абаза</option>
+                                        <option value="340">Абакан</option>
+                                        <option value="369">Абдулино</option>
+                                        <option value="370">Абинск</option>
+                                        <option value="371">Агидель</option>
+                                    </select>
+                                    <input type="phone" class="coupon-input phone required" name="phone"
+                                           placeholder="Телефон друга">
+                                    <select class="coupon-input required select-city-coupon" name="city"
+                                            placeholder="Город друга">
+                                        <option></option>
+                                        <option value="367">Абаза</option>
+                                        <option value="340">Абакан</option>
+                                        <option value="369">Абдулино</option>
+                                        <option value="370">Абинск</option>
+                                        <option value="371">Агидель</option>
+                                    </select>
+                                    <input type="phone" class="coupon-input phone required" name="phone"
+                                           placeholder="Телефон друга">
+                                    <select class="coupon-input required select-city-coupon" name="city"
+                                            placeholder="Город друга">
+                                        <option></option>
+                                        <option value="367">Абаза</option>
+                                        <option value="340">Абакан</option>
+                                        <option value="369">Абдулино</option>
+                                        <option value="370">Абинск</option>
+                                        <option value="371">Агидель</option>
+                                    </select>
+                                </div>
+                                <div class="agreement-coupon-section">
+
+                                    <div class="agreement-custom-input">
+                                        <input type="checkbox" name="agreement" class="agreement required"
+                                               id="agreement-coupon">
+                                        <label for="agreement-coupon">Я ознакомлен(а) с условиями <a
+                                                href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                    </div>
+                                    <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                                </div>
+                                <div class="get-coupon-btn btn">получить</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-content main-modal">
+                <div class="modal-header">
+                    <div class="modal-title" id="mainModalLabel"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="job-opening-modal-body">
+                        <div class="job-opening-left">
+                            <input type="text" name="name" placeholder="Фамилия Имя Отчество" class="name required modal-input">
+                            <input type="text" id="datepicker" class="modal-input" placeholder="Дата рождения">
+                            <div class="job-opening-selected">
+                                <span>Ваше гражданство</span>
+                                <div class="job-opening-selected-inputs">
+                                    <div class="job-opening-selected-inputs-checkbox">
+                                        <input type="checkbox" id="citizenship"
+                                               class="job-opening-checkbox citizenship-checkbox">
+                                        <label for="citizenship">РФ</label>
+                                    </div>
+                                    <input type="text" name="citizenship" class="citizenship-input modal-input"
+                                           placeholder="Другое">
+                                </div>
+                            </div>
+                            <div class="job-opening-selected">
+                            <span>Были ли у Вас административные, уголовные, гражданские
+иски, судимости? Если да, по каким статьям?</span>
+                                <div class="job-opening-selected-inputs">
+                                    <div class="job-opening-selected-inputs-checkbox">
+                                        <input type="checkbox" id="criminal"
+                                               class="job-opening-checkbox criminal-checkbox">
+                                        <label for="criminal">Нет</label>
+                                    </div>
+                                    <input type="text" name="criminal" class="criminal-input modal-input" placeholder="Другое">
+                                </div>
+                            </div>
+                            <div class="job-opening-selected">
+                                <span>Есть ли у Вас физические ограничения\инвалидность?</span>
+                                <div class="job-opening-selected-inputs">
+                                    <div class="job-opening-selected-inputs-checkbox">
+                                        <input type="checkbox" id="disability"
+                                               class="job-opening-checkbox disability-checkbox">
+                                        <label for="disability">Нет</label>
+                                    </div>
+                                    <input type="text" name="disability" class="disability-input modal-input" placeholder="Другое">
+                                </div>
+                            </div>
+                            <div class="job-opening-selected">
+                                <span>Есть ли у Вас опыт работы на кассе?</span>
+                                <div class="job-opening-selected-inputs">
+                                    <div class="job-opening-selected-inputs-checkbox">
+                                        <input type="radio" name="box-office" id="box-office-yes"
+                                               class="job-opening-checkbox disability-checkbox">
+                                        <label for="box-office-yes">Да</label>
+                                    </div>
+                                    <div class="job-opening-selected-inputs-checkbox">
+                                        <input type="radio" name="box-office" id="box-office-no"
+                                               class="job-opening-checkbox box-office-checkbox">
+                                        <label for="box-office-no">Нет</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" name="phone" placeholder="Номер телефона" class="phone required modal-input">
+                        </div>
+                        <div class="job-opening-right">
+                            <textarea name="achievements" placeholder="Опишите Ваши достоинства"></textarea>
+                            <textarea name="disadvantages" placeholder="Опишите Ваши недостатки"></textarea>
+                            <textarea name="why-are-we" placeholder="Почему Вы хотите работать у нас?"></textarea>
+                        </div>
+                        <div class="job-opening-footer">
+                            <div class="job-opening-footer-left">
+                                <span>Нажимая кнопку “отправить” вы даете согласие на обработку персональных данных</span>
+                                <div class="btn about-btn send-job-btn"><a >ОТПРАВИТЬ АНКЕТУ<span class="arrows-about"></span></a>
+                                </div>
+                            </div>
+                            <div class="job-opening-footer-right">
+                                <img src="static/images/logo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content main-modal">
+                <div class="modal-header">
+                    <div class="modal-title" id="successModalLabel"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="job-opening-success-modal">
+                        <div class="job-opening-success-modal-header">
+                            <div class="h1">СПАСИБО ЗА ОТКЛИК НА ВАКАНСИЮ</div>
+                            <div class="job-opening-tag">ПРОДАВЕЦ-КОНСУЛЬТАНТ “МЕГАХЕНД”</div>
+                        </div>
+                        <div class="job-opening-success-modal-footer">
+                            <p>Мы свяжемся с Вами в течение двух дней! <br>
+                                Ожидайте звонка менеджера!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end modals-->
     <section>
         <nav>
             <div class="container menu-container">
@@ -54,7 +276,7 @@
                     <li><a href="collection.html">Наши коллекции</a></li>
                     <li><a href="brands.html">Бренды</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="vacancy.html">Вакансии</a></li>
+                    <li class="active-page"><a href="vacancy.html">Вакансии</a></li>
                 </ul>
             </div>
         </nav>
@@ -69,7 +291,7 @@
                     <h2 class="accordion-header" id="headingOffice">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOffice" aria-expanded="false" aria-controls="collapseOffice">
-                            работник офиса
+                            РАБОТНИК ОФИСА
                         </button>
                     </h2>
                     <div id="collapseOffice" class="accordion-collapse collapse" aria-labelledby="headingOffice"
@@ -78,17 +300,21 @@
                             <div class="accordion" id="accordionOfffice">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
                                             ПРОДАВЕЦ-КОНСУЛЬТАНТ “МЕГАХЕНД”
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                         aria-labelledby="headingOne"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="job-openings-content">
-                                                <div class="btn about-btn"><a>заполнить анкету <span
-                                                        class="arrows-about"></span></a></div>
+                                                <div class="btn about-btn job-openings-modal-btn"><a>заполнить анкету
+                                                    <span class="arrows-about"></span></a>
+                                                </div>
                                                 <div class="job-openings-text-section">
                                                     <div class="duties-block">
                                                         <div class="about-page-content-container">
@@ -98,18 +324,22 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Консультировать покупателей, помогать в подборе модного и
-                                                                        стильного образа среди впечатляющего многообразия
+                                                                    <p>Консультировать покупателей, помогать в подборе
+                                                                        модного и
+                                                                        стильного образа среди впечатляющего
+                                                                        многообразия
                                                                         ассортимента</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Поддерживать порядок в торговом зале в соответствии с
+                                                                    <p>Поддерживать порядок в торговом зале в
+                                                                        соответствии с
                                                                         регламентами компании</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Разделить с нами возможность погрузиться в мир профессионального
+                                                                    <p>Разделить с нами возможность погрузиться в мир
+                                                                        профессионального
                                                                         мерчендайзинга</p>
                                                                 </div>
                                                                 <div class="custom-point">
@@ -128,7 +358,8 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Наличие документов для оформления в соответсвии ТК РФ</p>
+                                                                    <p>Наличие документов для оформления в соответсвии
+                                                                        ТК РФ</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
@@ -145,12 +376,15 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
                                             ПРОДАВЕЦ-КАССИР “МЕГАХЕНД”
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                         aria-labelledby="headingTwo"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="job-openings-content">
@@ -165,18 +399,22 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Консультировать покупателей, помогать в подборе модного и
-                                                                        стильного образа среди впечатляющего многообразия
+                                                                    <p>Консультировать покупателей, помогать в подборе
+                                                                        модного и
+                                                                        стильного образа среди впечатляющего
+                                                                        многообразия
                                                                         ассортимента</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Поддерживать порядок в торговом зале в соответствии с
+                                                                    <p>Поддерживать порядок в торговом зале в
+                                                                        соответствии с
                                                                         регламентами компании</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Разделить с нами возможность погрузиться в мир профессионального
+                                                                    <p>Разделить с нами возможность погрузиться в мир
+                                                                        профессионального
                                                                         мерчендайзинга</p>
                                                                 </div>
                                                                 <div class="custom-point">
@@ -195,7 +433,8 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Наличие документов для оформления в соответсвии ТК РФ</p>
+                                                                    <p>Наличие документов для оформления в соответсвии
+                                                                        ТК РФ</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
@@ -212,12 +451,15 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree" aria-expanded="false"
+                                                aria-controls="collapseThree">
                                             СПЕЦИАЛИСТ ОТДЕЛА КАДРОВ “МЕГАХЕНД”
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                         aria-labelledby="headingThree"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="job-openings-content">
@@ -232,18 +474,22 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Консультировать покупателей, помогать в подборе модного и
-                                                                        стильного образа среди впечатляющего многообразия
+                                                                    <p>Консультировать покупателей, помогать в подборе
+                                                                        модного и
+                                                                        стильного образа среди впечатляющего
+                                                                        многообразия
                                                                         ассортимента</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Поддерживать порядок в торговом зале в соответствии с
+                                                                    <p>Поддерживать порядок в торговом зале в
+                                                                        соответствии с
                                                                         регламентами компании</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Разделить с нами возможность погрузиться в мир профессионального
+                                                                    <p>Разделить с нами возможность погрузиться в мир
+                                                                        профессионального
                                                                         мерчендайзинга</p>
                                                                 </div>
                                                                 <div class="custom-point">
@@ -262,7 +508,8 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Наличие документов для оформления в соответсвии ТК РФ</p>
+                                                                    <p>Наличие документов для оформления в соответсвии
+                                                                        ТК РФ</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
@@ -279,12 +526,15 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading4">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapse4" aria-expanded="false"
+                                                aria-controls="collapse4">
                                             СМЕННЫЙ ТЕХНИК “МЕГАХЕНД”
                                         </button>
                                     </h2>
-                                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    <div id="collapse4" class="accordion-collapse collapse"
+                                         aria-labelledby="headingThree"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="job-openings-content">
@@ -299,18 +549,22 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Консультировать покупателей, помогать в подборе модного и
-                                                                        стильного образа среди впечатляющего многообразия
+                                                                    <p>Консультировать покупателей, помогать в подборе
+                                                                        модного и
+                                                                        стильного образа среди впечатляющего
+                                                                        многообразия
                                                                         ассортимента</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Поддерживать порядок в торговом зале в соответствии с
+                                                                    <p>Поддерживать порядок в торговом зале в
+                                                                        соответствии с
                                                                         регламентами компании</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Разделить с нами возможность погрузиться в мир профессионального
+                                                                    <p>Разделить с нами возможность погрузиться в мир
+                                                                        профессионального
                                                                         мерчендайзинга</p>
                                                                 </div>
                                                                 <div class="custom-point">
@@ -329,7 +583,8 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Наличие документов для оформления в соответсвии ТК РФ</p>
+                                                                    <p>Наличие документов для оформления в соответсвии
+                                                                        ТК РФ</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
@@ -352,7 +607,7 @@
                     <h2 class="accordion-header" id="headingShop">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseShop" aria-expanded="false" aria-controls="collapseShop">
-                           Работник магазина
+                            РАБОТНИК МАГАЗИНА
                         </button>
                     </h2>
                     <div id="collapseShop" class="accordion-collapse collapse" aria-labelledby="headingShop"
@@ -361,8 +616,10 @@
                             <div class="accordion" id="accordionShop">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading1">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapse1" aria-expanded="false"
+                                                aria-controls="collapse1">
                                             ПРОДАВЕЦ-КОНСУЛЬТАНТ “МЕГАХЕНД”
                                         </button>
                                     </h2>
@@ -381,18 +638,22 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Консультировать покупателей, помогать в подборе модного и
-                                                                        стильного образа среди впечатляющего многообразия
+                                                                    <p>Консультировать покупателей, помогать в подборе
+                                                                        модного и
+                                                                        стильного образа среди впечатляющего
+                                                                        многообразия
                                                                         ассортимента</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Поддерживать порядок в торговом зале в соответствии с
+                                                                    <p>Поддерживать порядок в торговом зале в
+                                                                        соответствии с
                                                                         регламентами компании</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Разделить с нами возможность погрузиться в мир профессионального
+                                                                    <p>Разделить с нами возможность погрузиться в мир
+                                                                        профессионального
                                                                         мерчендайзинга</p>
                                                                 </div>
                                                                 <div class="custom-point">
@@ -411,7 +672,8 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Наличие документов для оформления в соответсвии ТК РФ</p>
+                                                                    <p>Наличие документов для оформления в соответсвии
+                                                                        ТК РФ</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
@@ -428,8 +690,10 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading2">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapse2" aria-expanded="false"
+                                                aria-controls="collapse2">
                                             ПРОДАВЕЦ-КАССИР “МЕГАХЕНД”
                                         </button>
                                     </h2>
@@ -448,18 +712,22 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Консультировать покупателей, помогать в подборе модного и
-                                                                        стильного образа среди впечатляющего многообразия
+                                                                    <p>Консультировать покупателей, помогать в подборе
+                                                                        модного и
+                                                                        стильного образа среди впечатляющего
+                                                                        многообразия
                                                                         ассортимента</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Поддерживать порядок в торговом зале в соответствии с
+                                                                    <p>Поддерживать порядок в торговом зале в
+                                                                        соответствии с
                                                                         регламентами компании</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Разделить с нами возможность погрузиться в мир профессионального
+                                                                    <p>Разделить с нами возможность погрузиться в мир
+                                                                        профессионального
                                                                         мерчендайзинга</p>
                                                                 </div>
                                                                 <div class="custom-point">
@@ -478,7 +746,8 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Наличие документов для оформления в соответсвии ТК РФ</p>
+                                                                    <p>Наличие документов для оформления в соответсвии
+                                                                        ТК РФ</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
@@ -495,8 +764,10 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading3">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapse3" aria-expanded="false"
+                                                aria-controls="collapse3">
                                             СПЕЦИАЛИСТ ОТДЕЛА КАДРОВ “МЕГАХЕНД”
                                         </button>
                                     </h2>
@@ -515,18 +786,22 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Консультировать покупателей, помогать в подборе модного и
-                                                                        стильного образа среди впечатляющего многообразия
+                                                                    <p>Консультировать покупателей, помогать в подборе
+                                                                        модного и
+                                                                        стильного образа среди впечатляющего
+                                                                        многообразия
                                                                         ассортимента</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Поддерживать порядок в торговом зале в соответствии с
+                                                                    <p>Поддерживать порядок в торговом зале в
+                                                                        соответствии с
                                                                         регламентами компании</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Разделить с нами возможность погрузиться в мир профессионального
+                                                                    <p>Разделить с нами возможность погрузиться в мир
+                                                                        профессионального
                                                                         мерчендайзинга</p>
                                                                 </div>
                                                                 <div class="custom-point">
@@ -545,7 +820,8 @@
                                                             <div class="about-page-content">
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
-                                                                    <p>Наличие документов для оформления в соответсвии ТК РФ</p>
+                                                                    <p>Наличие документов для оформления в соответсвии
+                                                                        ТК РФ</p>
                                                                 </div>
                                                                 <div class="custom-point">
                                                                     <div class="point"></div>
@@ -616,7 +892,8 @@
                 БЛИЖАЙШИЕ МАГАЗИНЫ К ВАМ
             </div>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f2fb0bb059825d228cc66ce2e5b7b9ace9725272786db770aca3ed15da85349&amp;source=constructor" width="100%"frameborder="0"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f2fb0bb059825d228cc66ce2e5b7b9ace9725272786db770aca3ed15da85349&amp;source=constructor"
+                width="100%" frameborder="0"></iframe>
     </section>
 </main>
 <footer>
@@ -677,19 +954,22 @@
             <a href="#" class="footer-privacy">политика конфиденциальности</a>
         </div>
     </div>
-
 </footer>
-<script src="static/js/sliders.js"></script>
-<script src="static/js/index.js"></script>
-<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="static/js/sliders.js"></script>
+<script src="static/jquery-ui/jquery-ui.js"></script>
+
+<script src="static/js/index.js"></script>
 <!--<script src="static/select2/dist/js/select2.min.js"></script>-->
 <script src="static/select2/dist/js/i18n/ru.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=f69140e6-4f5f-4563-a7b4-d26cfe204ef4&lang=ru_RU"></script>
 <script src="static/js/map.js"></script>
-
 <script>
     $(document).ready(function () {
         $('.contact-select-city').select2(

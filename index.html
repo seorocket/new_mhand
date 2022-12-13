@@ -7,13 +7,11 @@
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Мегахенд</title>
 </head>
 <body>
@@ -30,11 +28,109 @@
 </header>
 <!--modals-->
 
-<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="mainModal" aria-labelledby="mainModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content coupon">
             <div class="modal-header coupon">
-                <div class="modal-title" id="exampleModalLabel">СКИДОЧНЫЙ КУПОН</div>
+                <div class="modal-title" id="mainModalLabel">СКИДОЧНЫЙ КУПОН</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="tabs">
+                    <ul class="tabs__caption">
+                        <li class="active">ПОЛУЧИ  300 РУБ.</li>
+                        <li>ПОЛУЧИ  500 РУБ.</li>
+                    </ul>
+                    <div class="tabs__content active">
+                        <div class="coupon-header">
+                            <div class="coupon-title">
+                                ПОЛУЧИТЕ 300 РУБЛЕЙ
+                            </div>
+                            <div class="coupon-description">
+                                Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую покупку с выгодой!
+                            </div>
+                        </div>
+                        <div class="coupon-form">
+                            <div class="coupon-inputs">
+                                <input type="text" class="coupon-input name required" name="name" placeholder="Алёна">
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="+7(123)456-78-90">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Выбрать город">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                            </div>
+                            <div class="agreement-coupon-section">
+
+                                <div class="agreement-custom-input">
+                                    <input type="checkbox" name="agreement" class="agreement required" id="agreement-coupon">
+                                    <label for="agreement-coupon">Я ознакомлен(а) с условиями <a href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                </div>
+                                <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                            </div>
+                            <div class="get-coupon-btn btn">получить</div>
+                        </div>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="coupon-header">
+                            <div class="coupon-title">
+                                ПОЛУЧИТЕ 500 РУБЛЕЙ
+                            </div>
+                            <div class="coupon-description">
+                                Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую покупку с выгодой!
+                            </div>
+                        </div>
+                        <div class="coupon-form">
+                            <div class="coupon-inputs">
+                                <input type="text" class="coupon-input name required" name="name" placeholder="Ваше имя">
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="Ваш Телефон">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Выбрать город">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="Телефон друга">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Город друга">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="Телефон друга">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Город друга">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                            </div>
+                            <div class="agreement-coupon-section">
+
+                                <div class="agreement-custom-input">
+                                    <input type="checkbox" name="agreement" class="agreement required" id="agreement-coupon">
+                                    <label for="agreement-coupon">Я ознакомлен(а) с условиями <a href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                </div>
+                                <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                            </div>
+                            <div class="get-coupon-btn btn">получить</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content main-modal">
+            <div class="modal-header coupon">
+                <div class="modal-title" id="mainModalLabel">СКИДОЧНЫЙ КУПОН</div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
@@ -641,7 +737,7 @@
     </sectionf>
     <section>
         <div class="container coupon-btn-section">
-            <div class="coupon-btn btn _coupon-500" data-bs-toggle="modal" data-bs-target="#exampleModal">получить купон на 500р</div>
+            <div class="coupon-btn btn _coupon-500"><p>получить купон на 500р</p></div>
         </div>
     </section>
     <section>
@@ -1185,6 +1281,11 @@
         </div>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="static/bootsrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="static/select2/dist/js/i18n/ru.js"></script>
 <script>
     $(document).ready(function () {
@@ -1194,7 +1295,7 @@
                 allowClear: true,
                 width: '100%',
                 language: "ru",
-                dropdownParent: $("#exampleModal")
+                dropdownParent: $("#mainModal")
             }
         );
     })

@@ -1,4 +1,20 @@
-
+// $(document).ready(function () {
+//
+//     $("#datepicker").datepicker();
+//     $('.select-city-coupon').select2(
+//         {
+//             placeholder: "Выбрать город",
+//             allowClear: true,
+//             width: '100%',
+//             language: "ru",
+//             dropdownParent: $("#exampleModal")
+//         }
+//     );
+//
+//     $('.test').on('click', function () {
+//         $('#exampleModal').show()
+//     })
+// })
 
 $(document).ready(function () {
     $(function () {
@@ -28,7 +44,7 @@ $(document).ready(function () {
     })
 
     $('.toggle-tabs').on('click', function () {
-        console.log($(this).next())
+
         if ($(this).next().children('li.active').next().length != 0) {
             $(this).next().children('li.active').next()
                 .addClass('active').siblings().removeClass('active')
@@ -76,6 +92,88 @@ $(document).ready(function () {
         }
     })
 
+    $('.search-container.reviews input').on('input', function () {
+        let temp = $(this).val(),
+            name,
+            text
+
+        if (temp) {
+            $('.reviews-item').each(function () {
+                name = $(this).children('.blovkkkkkkk').find('.name-review')
+                text = $(this).children('.blovkkkkkkk').find('.review-text p')
+
+                if (name.text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                    $(this).removeClass('d-none')
+                    name.each(function () {
+                        if ($(this).text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                            $(this).parents('.review-item').removeClass('d-none')
+                        } else {
+                            $(this).parents('.review-item').addClass('d-none')
+                        }
+                    })
+                } else {
+                    if (text.text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                        $(this).removeClass('d-none')
+                        text.each(function () {
+                            if ($(this).text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                                $(this).parents('.review-item').removeClass('d-none')
+                            } else {
+                                $(this).parents('.review-item').addClass('d-none')
+                            }
+                        })
+                    } else {
+                        $(this).addClass('d-none')
+                    }
+                }
+
+            })
+        } else {
+            $('.container.brands-page-container .brands-section .brand-item').each(function () {
+                $(this).removeClass('d-none')
+            })
+        }
+    })
+    $('.search-container.brands .search-btn-brands').on('click', function () {
+        let temp = $(this).val(),
+            name,
+            text
+
+        if (temp) {
+            $('.reviews-item').each(function () {
+                name = $(this).children('.blovkkkkkkk').find('.name-review')
+                text = $(this).children('.blovkkkkkkk').find('.review-text p')
+
+                if (name.text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                    $(this).removeClass('d-none')
+                    name.each(function () {
+                        if ($(this).text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                            $(this).parents('.review-item').removeClass('d-none')
+                        } else {
+                            $(this).parents('.review-item').addClass('d-none')
+                        }
+                    })
+                } else {
+                    if (text.text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                        $(this).removeClass('d-none')
+                        text.each(function () {
+                            if ($(this).text().toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                                $(this).parents('.review-item').removeClass('d-none')
+                            } else {
+                                $(this).parents('.review-item').addClass('d-none')
+                            }
+                        })
+                    } else {
+                        $(this).addClass('d-none')
+                    }
+                }
+
+            })
+        } else {
+            $('.container.brands-page-container .brands-section .brand-item').each(function () {
+                $(this).removeClass('d-none')
+            })
+        }
+    })
 
     //calendar
     $('.u-turn-btn').on('click', function () {
@@ -97,18 +195,57 @@ $(document).ready(function () {
 
 //    modals
 
+    function dNoneModal() {
+        $('.modal-content.main-modal').addClass('__d-none-modal')
+        $('.modal-content.coupon').addClass('__d-none-modal')
+        $('.job-opening-success-modal').addClass('__d-none-modal')
+        $('.job-opening-modal-body').addClass('__d-none-modal')
+        $('.add-review-modal-body').addClass('__d-none-modal')
+        $('.review-success-modal').addClass('__d-none-modal')
+    }
+
     $('._coupon-500').on('click', function () {
-        let elements = {
-            title_modal: $('#exampleModalLabel')
+        dNoneModal()
+        $('.modal-content.coupon').removeClass('__d-none-modal')
+        $('#mainModal').modal('show')
+    })
+
+    $('.get-coupon-btn').click(function () {
+        $('#mainModal').modal('hide')
+    })
+
+    $('.job-openings-modal-btn').on('click', function () {
+        let elements_modal = {
+            title: $('#mainModalLabel')
         }
-        elements.title_modal.html('СКИДОЧНЫЙ КУПОН')
-    })
-    
-    $('.get-coupon-btn').on('click', function () {
-        $('#exampleModal').hide()
+        dNoneModal()
+        $('.modal-content.main-modal').removeClass('__d-none-modal')
+        $('.job-opening-modal-body').removeClass('__d-none-modal')
+        elements_modal.title.html('ПРОДАВЕЦ-КОНСУЛЬТАНТ “МЕГАХЕНД”')
+        $('#mainModal').modal('show')
     })
 
+    $('.send-job-btn').click(function () {
+        $('#mainModal').modal('hide')
+        $('.job-opening-success-modal').removeClass('__d-none-modal')
+        $('#successModal').modal('show')
+    })
 
-//    поиск по фио и содержимому отзыва
+    $('.add-review-btn').on('click', function () {
+        dNoneModal()
+        $('.modal-content.main-modal').removeClass('__d-none-modal')
+        $('.modal-content.main-modal .modal-header').addClass('__d-none-modal')
+        $('.add-review-modal-body').removeClass('__d-none-modal')
+        $('#mainModal').modal('show')
+    })
+
+    $('.add-review-modal-btn').on('click', function () {
+        $('#mainModal').modal('hide')
+        $('.review-success-modal').removeClass('__d-none-modal')
+        $('#successModal').modal('show')
+    })
+
+    // $('.modal-content.main-modal .modal-header').addClass('__d-none-modal')
+
 
 })
