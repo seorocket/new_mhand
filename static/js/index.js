@@ -1,7 +1,8 @@
+
+
 $(document).ready(function () {
     $(function () {
         $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
-            console.log($(this).index())
             $(this)
                 .addClass('active').siblings().removeClass('active')
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
@@ -41,7 +42,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.search-container.brands input').on('input', function() {
+    $('.search-container.brands input').on('input', function () {
         let temp = $(this).val()
         if (temp) {
             $('.container.brands-page-container .brands-section .brand-item').each(function () {
@@ -74,6 +75,39 @@ $(document).ready(function () {
             })
         }
     })
+
+
+    //calendar
+    $('.u-turn-btn').on('click', function () {
+        let element = $(this).prev().children('.blog-item-text-content')
+        element.removeClass('active')
+        $(this).css({'display': 'none'})
+        element.css({'max-height': element.children()[0].scrollHeight + 'px'})
+    })
+
+    $('.calendar-btn').on('click', function () {
+        $('.small-calendar').removeClass('active').addClass('hidden')
+        $('.big-calendar').removeClass('hidden').addClass('active')
+    })
+
+    $('.close-calendar').on('click', function () {
+        $('.big-calendar').removeClass('active').addClass('hidden')
+        $('.small-calendar').removeClass('hidden').addClass('active')
+    })
+
+//    modals
+
+    $('._coupon-500').on('click', function () {
+        let elements = {
+            title_modal: $('#exampleModalLabel')
+        }
+        elements.title_modal.html('СКИДОЧНЫЙ КУПОН')
+    })
+    
+    $('.get-coupon-btn').on('click', function () {
+        $('#exampleModal').hide()
+    })
+
 
 //    поиск по фио и содержимому отзыва
 

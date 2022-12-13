@@ -6,7 +6,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
@@ -24,8 +28,115 @@
         </div>
     </div>
 </header>
+<!--modals-->
+
+<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content coupon">
+            <div class="modal-header coupon">
+                <div class="modal-title" id="exampleModalLabel">СКИДОЧНЫЙ КУПОН</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="tabs">
+                    <ul class="tabs__caption">
+                        <li class="active">ПОЛУЧИ  300 РУБ.</li>
+                        <li>ПОЛУЧИ  500 РУБ.</li>
+                    </ul>
+                    <div class="tabs__content active">
+                        <div class="coupon-header">
+                            <div class="coupon-title">
+                                ПОЛУЧИТЕ 300 РУБЛЕЙ
+                            </div>
+                            <div class="coupon-description">
+                                Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую покупку с выгодой!
+                            </div>
+                        </div>
+                        <div class="coupon-form">
+                            <div class="coupon-inputs">
+                                <input type="text" class="coupon-input name required" name="name" placeholder="Алёна">
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="+7(123)456-78-90">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Выбрать город">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                            </div>
+                            <div class="agreement-coupon-section">
+
+                                <div class="agreement-custom-input">
+                                    <input type="checkbox" name="agreement" class="agreement required" id="agreement-coupon">
+                                    <label for="agreement-coupon">Я ознакомлен(а) с условиями <a href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                </div>
+                                <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                            </div>
+                            <div class="get-coupon-btn btn">получить</div>
+                        </div>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="coupon-header">
+                            <div class="coupon-title">
+                                ПОЛУЧИТЕ 500 РУБЛЕЙ
+                            </div>
+                            <div class="coupon-description">
+                                Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую покупку с выгодой!
+                            </div>
+                        </div>
+                        <div class="coupon-form">
+                            <div class="coupon-inputs">
+                                <input type="text" class="coupon-input name required" name="name" placeholder="Ваше имя">
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="Ваш Телефон">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Выбрать город">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="Телефон друга">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Город друга">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                                <input type="phone" class="coupon-input phone required" name="phone" placeholder="Телефон друга">
+                                <select class="coupon-input required select-city-coupon" name="city" placeholder="Город друга">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                            </div>
+                            <div class="agreement-coupon-section">
+
+                                <div class="agreement-custom-input">
+                                    <input type="checkbox" name="agreement" class="agreement required" id="agreement-coupon">
+                                    <label for="agreement-coupon">Я ознакомлен(а) с условиями <a href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                </div>
+                                <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                            </div>
+                            <div class="get-coupon-btn btn">получить</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--end modals-->
 <main>
-    <section>
+    <sectionf>
         <div class="index">
             <nav>
                 <div class="container menu-container">
@@ -33,20 +144,20 @@
                         <li class="dropdown">
                             О компании <i class="fa-solid fa-chevron-down"></i>
                             <ul class="submenu">
-                                <li><a href="#">О компании</a></li>
+                                <li><a href="about.html">О компании</a></li>
                                 <li class="sub-dropdown">
-                                    <a href="#" style="display: flex; gap: 5px; align-items: center">Сотрудничество <i
+                                    <a style="display: flex; gap: 5px; align-items: center">Сотрудничество <i
                                             class="fa-solid fa-chevron-down"></i></a>
                                     <ul class="sub-submenu">
-                                        <li><a href="#">Арендодателям</a></li>
-                                        <li><a href="#">Оптовикам (ветошь)</a></li>
-                                        <li><a href="#">Реклама у нас</a></li>
+                                        <li><a href="cooperation.html">Арендодателям</a></li>
+                                        <li><a href="cooperation_old_fabric.html">Оптовикам (ветошь)</a></li>
+                                        <li><a href="cooperation_advertising_with_us.html">Реклама у нас</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Новости</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Блог</a></li>
+                                <li><a href="news.html">Новости</a></li>
+                                <li><a href="reviews.html">Отзывы</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="blog.html">Блог</a></li>
                             </ul>
                         </li>
                         <li><a href="stock.html">Акции</a></li>
@@ -527,29 +638,29 @@
                 </div>
             </div>
         </div>
-    </section>
+    </sectionf>
     <section>
         <div class="container coupon-btn-section">
-            <div class="coupon-btn btn">получить купон на 500р</div>
+            <div class="coupon-btn btn _coupon-500" data-bs-toggle="modal" data-bs-target="#exampleModal">получить купон на 500р</div>
         </div>
     </section>
     <section>
         <div class="container category">
             <div class="block-category">
                 <p>для неё</p>
-                <a href="#" class="btn category-btn">
+                <a href="our_collection.html" class="btn category-btn">
                     женская коллекция
                 </a>
             </div>
             <div class="block-category">
                 <p>для него</p>
-                <a href="#" class="btn category-btn">
+                <a href="our_collection.html" class="btn category-btn">
                     мужская коллекция
                 </a>
             </div>
             <div class="block-category">
                 <p>для детей</p>
-                <a href="#" class="btn category-btn">
+                <a href="our_collection.html" class="btn category-btn">
                     детская коллекция
                 </a>
             </div>
@@ -916,7 +1027,7 @@
                 <p>наш блог</p>
             </div>
             <div class="blog-content">
-                <div class="blog-item">
+                <div class="blog-item-index">
                     <img src="static/images/models/h11-shop-img-1.jpg" alt="">
                     <div class="content-blog-section">
                         <div class="header-content-blog">
@@ -928,12 +1039,12 @@
                                 для детей.
                                 Коллекции пополняются каждую неделю. Все товары приезжают из-за рубежа.
                                 Если Вы хотите одеваться стильно..</p>
-                            <a href="blog-item.html" class="read-more-btn">Подробнее <span
+                            <a href="blog.html" class="read-more-btn">Подробнее <span
                                     class="arrows-blog"></span></a>
                         </div>
                     </div>
                 </div>
-                <div class="blog-item">
+                <div class="blog-item-index">
                     <img src="static/images/models/Girl_1.jpg" alt="">
                     <div class="content-blog-section">
                         <div class="header-content-blog">
@@ -945,7 +1056,7 @@
                                 для детей.
                                 Коллекции пополняются каждую неделю. Все товары приезжают из-за рубежа.
                                 Если Вы хотите одеваться стильно..</p>
-                            <a href="blog-item.html" class="read-more-btn">Подробнее <span
+                            <a href="blog.html" class="read-more-btn">Подробнее <span
                                     class="arrows-blog"></span></a>
                         </div>
                     </div>
@@ -1024,19 +1135,19 @@
             <div class="footer-main">
                 <nav class="footer">
                     <ul class="footer-menu">
-                        <li><a href="#">
+                        <li><a href="about.html">
                             О компании
                             <ul class="footer-sub-menu">
-                                <li><a href="#">Сотрудничество</a></li>
-                                <li><a href="#">Новости</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Блог</a></li>
+                                <li><a href="cooperation.html">Сотрудничество</a></li>
+                                <li><a href="news.html">Новости</a></li>
+                                <li><a href="reviews.html">Отзывы</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="blog.html">Блог</a></li>
                             </ul>
                         </a></li>
-                        <li><a href="#">Акции</a></li>
-                        <li><a href="#">Бренды</a></li>
-                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="stocks.html">Акции</a></li>
+                        <li><a href="brands.html">Бренды</a></li>
+                        <li><a href="job_openings.html">Вакансии</a></li>
                     </ul>
                 </nav>
                 <div class="social-bloc">
@@ -1073,9 +1184,23 @@
             <a href="#" class="footer-privacy">политика конфиденциальности</a>
         </div>
     </div>
-
 </footer>
+<script src="static/select2/dist/js/i18n/ru.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.select-city-coupon').select2(
+            {
+                placeholder: "Выбрать город",
+                allowClear: true,
+                width: '100%',
+                language: "ru",
+                dropdownParent: $("#exampleModal")
+            }
+        );
+    })
+</script>
 <script src="static/js/sliders.js"></script>
 <script src="static/js/index.js"></script>
+
 </body>
 </html>

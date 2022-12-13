@@ -43,6 +43,10 @@ header {
     margin-inline: auto;
 }
 
+.tabs__caption {
+    cursor: pointer;
+}
+
 .header-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -492,7 +496,7 @@ nav {
 .container.coupon-btn-section {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(160, 160, 160, 0.25);
-    margin-top: -130px;
+    margin-top: -50px;
     position: relative;
     z-index: 3;
     padding: 25px 0;
@@ -965,11 +969,12 @@ nav {
 
 .blog-content {
     display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
 }
 
-.blog-content .blog-item {
+.blog-content .blog-item-index {
     width: 50%;
     display: flex;
     align-items: center;
@@ -977,7 +982,7 @@ nav {
     position: relative;
 }
 
-.blog-item img {
+.blog-item-index img {
     height: 430px;
     width: 100%;
     object-fit: cover;
@@ -2095,7 +2100,7 @@ section.stocks {
 
 
 .our-collection-btn {
-    background: linear-gradient(270deg, rgba(2, 63, 183, 0.2) 53.29%, rgba(164, 185, 225, 0.2) 87.2%), conic-gradient(from 180deg at 50% 50%, rgba(255, 255, 255, 0) -167.08deg, #FFFFFF 191.75deg, rgba(255, 255, 255, 0) 192.92deg, #FFFFFF 551.75deg), #3359A4;
+    background: linear-gradient(322deg, rgba(2, 63, 183, 0.2) 53.29%, rgba(164, 185, 225, 0.2) 87.2%), conic-gradient(from 215deg at 50% 50%, rgba(255, 255, 255, 0) -167.08deg, #FFFFFF 191.75deg, rgba(255, 255, 255, 0) 192.92deg, #FFFFFF 551.75deg), #3359A4;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 20px;
@@ -2974,4 +2979,352 @@ section.reviews {
     border-radius: 50%;
     width: 60px;
     height: 60px;
+}
+
+.search-container.brands.reviews input {
+    background: transparent;
+}
+
+section.faq-section .accordion-body {
+    padding: 0 40px 40px !important;
+}
+
+section.faq-section .accordion-item {
+    border: none !important;
+}
+
+section.faq-section .accordion-button.collapsed {
+    background: #fff !important;
+}
+
+section.faq-section {
+    padding: 60px 0;
+    background: rgba(229, 230, 227, 0.4);
+}
+
+.faq-container {
+    margin-top: 50px;
+}
+
+.blog-page-section {
+    display: grid;
+    gap: 50px 18px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-item img {
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 96%;
+    padding: 50px 40px;
+    background: rgba(255, 255, 255, 0.85);
+    margin-top: -15%;
+}
+
+.blog-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-item-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blog-item-header .blog-item-title {
+    color: #5f5a2d;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    text-transform: uppercase;
+}
+
+.blog-item-header .blog-item-date {
+    font-family: 'Montserrat', sans-serif;
+    color: #8d8d8d;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.blog-item-text-content {
+    position: relative;
+    max-height: 100px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.blog-item-text-content.active:before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.u-turn-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #A6A6A6;
+    cursor: pointer;
+
+}
+
+.arrows-about.u-turn-arrows:before,
+.arrows-about.u-turn-arrows:after,
+.arrows-about.u-turn-arrows {
+    background: #A6A6A6;
+}
+
+.u-turn-btn .arrows-about.prev:before {
+    transform: rotate(-35deg);
+}
+
+.blog-filter {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.blog-filter-select {
+    border: none;
+    border-bottom: 1px solid #545454;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #545454;
+    font-size: 16px;
+    line-height: 20px;
+    outline: none;
+}
+
+.close-calendar {
+    cursor: pointer;
+}
+
+.small-calendar.active,
+.big-calendar.active {
+    display: block;
+}
+
+.small-calendar.hidden,
+.big-calendar.hidden {
+    display: none;
+}
+
+.modal-header.coupon {
+    padding: 25px 300px;
+    width: 100%;
+    justify-content: center !important;
+    position: relative;
+    background: linear-gradient(270deg, rgba(51, 51, 51, 0.2) 53.29%, rgba(44, 43, 43, 0.2) 87.2%), conic-gradient(from 180deg at 50% 50%, rgba(255, 255, 255, 0) -167.08deg, #FFFFFF 191.75deg, rgba(255, 255, 255, 0) 192.92deg, #FFFFFF 551.75deg), #212121;
+    color: var(--white);
+}
+
+.modal-header.coupon:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    opacity: .6;
+    z-index: 1;
+}
+
+.modal-header.coupon .modal-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+}
+
+.modal-header.coupon .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.modal-dialog {
+    max-width: 80vw !important;
+}
+
+.modal-content.coupon {
+    align-items: center;
+}
+
+.modal-body .tabs__caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.modal-body .tabs__caption li {
+    text-align: center;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    width: 50%;
+    color: #000000;
+    background: #D9D9D9;
+    padding: 14px 60px;
+}
+
+.modal-body .tabs__caption li.active {
+    background: #E4CD00;
+    box-shadow: 0px 0px 13px #E4CD00;
+}
+
+.coupon-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.coupon-title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+
+    color: #2C2B2B;
+}
+
+.coupon-description {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    max-width: 530px;
+    color: #2C2B2B;
+}
+
+.coupon-form,
+.coupon-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coupon-inputs input{
+    background: #ECECEC;
+    padding: 10px 20px;
+    color: var(--tab-black);
+    border: none;
+    outline: none;
+}
+
+.coupon-inputs .select2-container--default .select2-selection--single{
+    background: #ECECEC;
+}
+
+.coupon-inputs input::placeholder {
+    color: #a5a5a5
+}
+
+.coupon-inputs .select2.select2-container .select2-selection {
+    border: none;
+}
+
+.select2-container{
+    z-index: 9998;
+}
+
+.agreement-coupon-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.agreement-custom-input{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.agreement-custom-input label{
+    font-family: Arial;
+    color: var(--tab-black);
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.agreement-custom-input label a{
+    text-decoration: underline;
+    color: var(--tab-black);
+}
+
+.agreement-custom-input input + label:before{
+    content: '';
+    width: 20px;
+    cursor: pointer;
+    height: 20px;
+    display: inline-block;
+    background: #ECECEC;
+    margin-right: 15px;
+}
+
+.agreement-custom-input input:checked + label:before{
+    background-color: #ECECEC;
+    background-image: url("../images/icons/check.png");
+    background-size: contain;
+    background-position: right;
+}
+
+
+.agreement-coupon-section span{
+    color: #CFCFCF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+
+.agreement-custom-input input{
+    position: absolute;
+    opacity: 0;
+}
+
+.get-coupon-btn.btn{
+    background: var(--yellow);
+    padding: 10px 0;
+    color: var(--tab-black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 0;
 }
