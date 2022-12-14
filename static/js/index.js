@@ -183,7 +183,7 @@ $(document).ready(function () {
         element.css({'max-height': element.children()[0].scrollHeight + 'px'})
     })
 
-    $('.calendar-btn').on('click', function () {
+    $('.calendar-btn-pc').on('click', function () {
         $('.small-calendar').removeClass('active').addClass('hidden')
         $('.big-calendar').removeClass('hidden').addClass('active')
     })
@@ -202,6 +202,7 @@ $(document).ready(function () {
         $('.job-opening-modal-body').addClass('__d-none-modal')
         $('.add-review-modal-body').addClass('__d-none-modal')
         $('.review-success-modal').addClass('__d-none-modal')
+        // $('.calendarModal').addClass('__d-none-modal')
     }
 
     $('._coupon-500').on('click', function () {
@@ -245,7 +246,28 @@ $(document).ready(function () {
         $('#successModal').modal('show')
     })
 
-    // $('.modal-content.main-modal .modal-header').addClass('__d-none-modal')
+    $('.modal-calendar').on('click', function () {
+        $('#calendarModal').modal('show')
+    })
 
+    //
 
+    $('.mobile-dropdown-trigger').click(()=>{
+        if($('.mobile-sub-dropdown').hasClass('active')){
+            $('.mobile-sub-dropdown-trigger').removeClass('active')
+            $('.mobile-sub-dropdown').removeClass('active')
+        }
+
+        $('.mobile-dropdown-trigger').toggleClass('active')
+        $('.mobile-dropdown').toggleClass('active')
+    })
+
+    $('.mobile-sub-dropdown-trigger').click(()=>{
+        $('.mobile-sub-dropdown').toggleClass('active')
+        $('.mobile-sub-dropdown-trigger').toggleClass('active')
+    })
+
+    $('.mobile-calendar-triger-section').click(()=>{
+        $('.calendar-slide').toggleClass('slide')
+    })
 })

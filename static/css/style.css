@@ -39,7 +39,7 @@ header {
 }
 
 .container {
-    width: min(100%, 1320px);
+    width: min(100%, 85vw);
     margin-inline: auto;
 }
 
@@ -102,11 +102,11 @@ header {
 }
 
 .active-page,
-li.active-page a{
+li.active-page a {
     color: var(--yellow) !important;
 }
 
-.name-review{
+.name-review {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -230,6 +230,7 @@ nav {
 
 .landing-section img {
     width: 80%;
+    max-width: 750px;
     height: auto;
     position: absolute;
     z-index: 2;
@@ -274,11 +275,18 @@ nav {
     padding: 20px;
 }
 
-.calendar-section {
+.mobile-calendar-section {
+    display: none;
+}
+
+.calendar-section,
+.mobile-calendar-section,
+.mobile-small-calendar {
     max-width: 421px;
 }
 
-.calendar-section .calendar {
+.calendar-section .calendar,
+.mobile-calendar-section {
     position: relative;
     z-index: 2;
 }
@@ -533,12 +541,12 @@ nav {
     position: relative;
 }
 
-.btn.coupon-btn p{
+.btn.coupon-btn p {
     position: relative;
     z-index: 2;
 }
 
-.btn.coupon-btn:after{
+.btn.coupon-btn:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -566,6 +574,7 @@ nav {
     align-items: flex-end;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .category .block-category:nth-of-type(1) {
@@ -1164,7 +1173,7 @@ section.map {
     position: absolute;
     z-index: 2;
     top: 50%;
-    left: 200px;
+    left: 5vw;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -3227,8 +3236,10 @@ section.faq-section {
     width: 50%;
     color: #000000;
     background: #D9D9D9;
-    padding: 14px 60px;
+    padding: 14px;
+
 }
+
 
 .modal-body .tabs__caption li.active {
     background: #E4CD00;
@@ -3661,7 +3672,7 @@ section.faq-section {
     margin: 0;
 }
 
-.add-review-modal-right{
+.add-review-modal-right {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -3683,50 +3694,51 @@ section.faq-section {
     font-weight: 300;
 }
 
-.add-review-modal-right-body{
+.add-review-modal-right-body {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
 
-.add-review-modal-right-body .big-grid{
+.add-review-modal-right-body .big-grid {
     grid-column: 1/6;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px 25px;
 }
 
-.add-review-modal-right-body .big-grid .custom-input-file{
+.add-review-modal-right-body .big-grid .custom-input-file {
     height: 170px;
 }
 
-.add-review-modal-right-body .custom-input-file{
+.add-review-modal-right-body .custom-input-file {
     height: 140px;
     position: relative;
     cursor: pointer;
 }
 
-.custom-input-file{
+.custom-input-file {
     border: 1px solid #111;
 }
 
-.custom-input-file input{
+.custom-input-file input {
     display: none;
 }
-.custom-input-file label{
+
+.custom-input-file label {
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
 
-.custom-input-file label:after{
+.custom-input-file label:after {
     content: url("../images/icons/plus.svg");
     position: absolute;
     top: 5px;
     right: 5%;
 }
 
-.review-tag{
+.review-tag {
     padding: 30px;
     border: 4px solid var(--yellow);
     display: flex;
@@ -3735,7 +3747,7 @@ section.faq-section {
     gap: 15px;
 }
 
-.review-tag .review-city{
+.review-tag .review-city {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     line-height: 29px;
@@ -3743,7 +3755,7 @@ section.faq-section {
     font-weight: 600;
 }
 
-.review-tag .review-address-modal{
+.review-tag .review-address-modal {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -3752,22 +3764,241 @@ section.faq-section {
 }
 
 .review-success-modal,
-.review-success-modal-header{
+.review-success-modal-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
 }
 
-.review-success-modal-footer{
+.review-success-modal-footer {
     max-width: 500px;
 }
 
-.review-success-modal-footer p{
+.review-success-modal-footer p {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     line-height: 29px;
     color: var(--tab-black);
     font-weight: 500;
     text-align: center;
+}
+
+.all-news-mobile {
+    display: none;
+    position: relative;
+}
+
+.blog-index-mobile {
+    display: none;
+}
+
+.mobile-header {
+    display: none
+}
+
+.mobile-header .mobile-menu {
+    width: 40px;
+    height: 6px;
+    background: var(--yellow);
+    border-radius: 20px;
+    position: relative;
+    margin-top: -15px;
+}
+
+.mobile-header .mobile-menu:after {
+    content: '';
+    width: 40px;
+    height: 6px;
+    background: var(--yellow);
+    border-radius: 20px;
+    position: absolute;
+    bottom: -15px;
+}
+
+.offcanvas {
+    background-color: #323131 !important;
+}
+
+.offcanvas-header .btn-close {
+    background: transparent url("../images/icons/close.svg") center/1em auto no-repeat;
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+}
+
+.offcanvas-header {
+    justify-content: flex-end !important;
+}
+
+.container-mobile-menu nav ul li,
+.container-mobile-menu nav ul li a {
+    list-style: none;
+    color: var(--white);
+}
+
+.offcanvas.offcanvas-top {
+    height: 80% !important;
+}
+
+.container-mobile-menu nav ul.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.mobile-dropdown,
+.mobile-sub-dropdown {
+    display: none;
+}
+
+.mobile-dropdown.active,
+.mobile-sub-dropdown.active {
+    display: flex;
+}
+
+.mobile-dropdown {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mobile-dropdown li,
+.mobile-dropdown li a {
+    color: #D1D1D1 !important;
+}
+
+.mobile-sub-dropdown {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.mobile-sub-dropdown li,
+.mobile-sub-dropdown li a {
+    color: #8A8A8A !important;
+}
+
+.mobile-sub-dropdown-trigger {
+    position: relative;
+    z-index: 2;
+}
+
+.mobile-dropdown-trigger i,
+.mobile-sub-dropdown-trigger i {
+    transform: rotate(90deg);
+    transition: all .1s ease-in-out;
+}
+
+.mobile-dropdown-trigger.active i,
+.mobile-sub-dropdown-trigger.active i {
+    transform: rotate(0deg);
+}
+
+.mobile-calendar-trigger {
+    transform: rotate(-90deg);
+    background: var(--tab-black);
+    bottom: 30%;
+    left: -13vw;
+    position: absolute;
+    width: max-content;
+
+}
+
+.mobile-calendar-triger-section {
+    position: relative;
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px 50px;
+    z-index: 2;
+}
+
+.mobile-calendar-triger-section:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(180deg, #FFFFFF 7.45%, rgba(255, 255, 255, 0) 94.54%);
+}
+
+.mobile-calendar-share {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    transform: rotate(90deg);
+}
+
+.triangle-section {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.triangle-section .triangle {
+    content: '';
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-top: 10px solid var(--yellow); /* Добавляем треугольник */
+}
+
+.mobile-small-calendar {
+    position: absolute;
+    transform: rotate(90deg);
+    margin-top: 8px;
+    left: -8px;
+    z-index: 5;
+    width: 320px;
+    overflow: hidden;
+}
+
+.video-iframe {
+    width: 100%;
+}
+
+.about-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.next-blog-slider-arrow.stock-slider-arrow {
+    top: 60%;
+}
+
+.calendar-slide {
+    left: -100%;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.calendar-slide.slide {
+    left: 0;
+}
+
+#calendarModal .body-calendar.big {
+    max-width: 100%;
+}
+
+#calendarModal .modal-content.main-modal {
+    padding: 0;
+}
+
+#calendarModal .big-calendar-day{
+    height: 43px;
+    padding: 0;
+}
+
+#calendarModal .big-calendar-sale-block{
+    font-size: 8px;
 }
