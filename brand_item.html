@@ -6,10 +6,12 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Мегахенд</title>
 </head>
 <body>
@@ -23,7 +25,49 @@
             <div class="btn header-btn">войти</div>
         </div>
     </div>
+    <div class="mobile-header container">
+        <a href="#offcanvasExample" data-bs-toggle="offcanvas" aria-controls="offcanvasTop" class="mobile-menu"></a>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+        <div class="btn mobile-header-btn"><img src="static/images/icons/ic-login.png" alt=""></div>
+    </div>
 </header>
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container-mobile-menu container">
+            <nav>
+                <ul class="mobile-nav">
+                    <li>
+                        <span class="mobile-dropdown-trigger">О компании <i class="fa-solid fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li>
+                                <span class="mobile-sub-dropdown-trigger">Сотрудничество <i
+                                        class="fa-solid fa-chevron-down"></i></span>
+                                <ul class="mobile-sub-dropdown">
+                                    <li><a href="">Арендодателям</a></li>
+                                    <li><a href="">Оптовикам (ветошь)</a></li>
+                                    <li><a href="">Реклама у нас</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Блог</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Акции</a></li>
+                    <li><a href="">Наши коллекции</a></li>
+                    <li><a href="">Бренды</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Вакансии</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
 <main>
     <section>
         <nav>
@@ -145,7 +189,9 @@
     </div>
 
 </footer>
-<script src="static/js/sliders.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="static/bootsrap/js/bootstrap.bundle.min.js"></script>
 <script src="static/js/index.js"></script>
 </body>
 </html>

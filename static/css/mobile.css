@@ -1,4 +1,4 @@
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
     .stock-container.container .tabs {
         width: 90%;
         margin: 0 auto;
@@ -10,6 +10,10 @@
 }
 
 @media screen and (max-width: 1380px) {
+
+    .toggle-tabs {
+        top: 50px;
+    }
 
     .stock-container.container .tabs {
         width: 90%;
@@ -47,7 +51,79 @@
     }
 }
 
+@media screen and (max-width: 1280px) {
+
+    .toggle-tabs {
+        top: 160px;
+    }
+
+    .our-collection-images .img-block-collection {
+        height: 450px;
+    }
+
+    .our-collection-text {
+        width: 100%;
+    }
+
+    .our-collection-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .our-collection-btn {
+        font-size: 14px;
+    }
+
+    .stock-item-page-content,
+    .brands-item-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brands-item-content img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .title-block.brands-item img {
+        max-width: 90vw;
+    }
+
+    .btn.about-btn a {
+        font-size: 12px;
+    }
+
+    .container.about-page-container,
+    .about-page-main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-page-main-content {
+        gap: 60px;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-sale-block {
+        font-size: 56px;
+        line-height: 60px;
+    }
+}
+
 @media screen and (max-width: 1180px) {
+
+    .add-review-modal-body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day {
+        height: 120px;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-sale-block {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
     .body-content-blog p {
         font-size: 16px;
         line-height: 20px;
@@ -63,6 +139,10 @@
 
     .title-block {
         margin-bottom: 30px;
+    }
+
+    .container.about-page-container .title-block {
+        margin-bottom: 80px;
     }
 
     .next-blog-slider-arrow,
@@ -82,6 +162,40 @@
 }
 
 @media screen and (max-width: 1100px) {
+
+    .job-openings-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job-openings-text-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .job-openings-content img {
+        display: none;
+    }
+
+    .about-page-content-container {
+        width: 100%;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day {
+        height: 100px;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-sale-block {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about-old-fabrics-content img {
+        width: 80%;
+    }
+
     .landing-section img {
         right: -40%;
         width: 100%;
@@ -127,9 +241,86 @@
     .landing-section img {
         width: 550px;
     }
+
+    .container.about-page-new-clothe-container {
+        flex-direction: column;
+    }
+
+    .about-page-new-clothe-content {
+        margin-top: -40px;
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 1000px) {
+
+    .guarantees-item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .guarantees-block .title-block {
+        margin-bottom: 30px;
+    }
+
+    .guarantees-block {
+        display: block;
+        min-width: 0;
+    }
+
+    .mobile-guarantees-content {
+        display: block;
+    }
+
+    .next-guarantees-slider.stock-slider-arrow {
+        right: -10px;
+    }
+
+    .about-page-content.guarantees {
+        display: none;
+    }
+
+    .job-opening-modal-body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .job-opening-footer {
+        grid-column: auto;
+    }
+
+    .job-opening-footer .job-opening-footer-right img {
+        display: none;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-sale-block {
+        margin-top: 35%;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day {
+        height: 100px;
+
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-new-clothe {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .container.about-page-container.cooperation.advertising {
+        flex-direction: column;
+    }
+
+    .container.about-page-container.cooperation,
+    .container.about-page-container.cooperation-contacts {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .about-page-content-container {
+        width: 100%;
+    }
+
     .landing-text p {
         font-size: 48px;
         line-height: 54px;
@@ -177,6 +368,64 @@
 
 @media screen and (max-width: 960px) {
 
+    .container.contacts-container {
+        overflow-x: hidden;
+    }
+
+    .filter-contact-section {
+        display: none;
+    }
+
+    .mobile-filter-contact-section {
+        display: block;
+    }
+
+    .search-select-section {
+        flex-direction: column;
+        width: 200%;
+    }
+
+    .news-page-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .news-page-section .tabs__caption {
+        flex-direction: column;
+    }
+
+    .news-page-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .container.about-page-mailing-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        gap: 50px;
+    }
+
+    .about-page-sale-main-content {
+        flex-direction: column;
+    }
+
+    .container.about-page-sale-container {
+        align-items: center;
+    }
+
+    .about-page-mailing-container-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-page-mailing-container-form {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .container.header-container,
     main nav {
         display: none;
@@ -212,6 +461,38 @@
 }
 
 @media screen and (max-width: 900px) {
+
+    .our-collection-content {
+        align-items: flex-start;
+    }
+
+    .reviews-item {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .big-calendar-date-section.stocks {
+        gap: 10px;
+    }
+
+    .about-old-fabrics-content {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .about-old-fabrics-content p:last-child {
+        grid-column: auto;
+    }
+
+    .container.old-fabrics-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .container.old-fabrics-container img {
+        width: 100%;
+    }
+
     .category .block-category p {
         font-size: 60px;
         line-height: 65px;
@@ -234,9 +515,7 @@
         flex-direction: column;
         gap: 10px;
     }
-}
 
-@media screen and (max-width: 900px) {
     .category .block-category p {
         font-size: 54px;
         line-height: 60px;
@@ -253,6 +532,24 @@
 }
 
 @media screen and (max-width: 820px) {
+
+    .accordion-body {
+        padding: 10px !important;
+    }
+
+    .duties-block, .requirements-block {
+        width: 100%;
+    }
+
+    .title-block:after {
+        width: 70%;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-new-clothe {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
     .calendar-section {
         display: none;
     }
@@ -325,6 +622,71 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    #current-review-photo {
+        height: 245px;
+    }
+
+    .modal-content.main-modal {
+        padding: 10px;
+    }
+
+    .city-filter {
+        display: none;
+    }
+
+    .mobile-city-filter {
+        display: block;
+    }
+
+    .h1-n {
+        font-size: 140px;
+        line-height: 171px;
+    }
+
+    .n-container.container span {
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .btn.n-btn {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .brand-item-content {
+        height: 200px;
+    }
+
+    .brand-item {
+        min-height: auto;
+    }
+
+    .btn.search-btn {
+        padding: 15px 10px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .arrows-about {
+        width: 20px;
+    }
+
+    .brands-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-new-clothe,
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-sale-block {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .custom-input-block {
+        width: 100%;
+    }
+
     .about-content-section .deco-line {
         width: 80%;
     }
@@ -421,7 +783,7 @@
     .coupon-title {
         font-size: 22px;
         line-height: 27px;
-        
+
         text-align: center;
         letter-spacing: 0.03em;
 
@@ -447,6 +809,27 @@
 }
 
 @media screen and (max-width: 668px) {
+
+    .blog-item img {
+        width: 100%;
+    }
+
+    .blog-page-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-page-img {
+        width: 80vw;
+    }
+
+    .container.about-page-new-clothe-container img {
+        width: 100vw;
+    }
+
+    .about-page-content-container {
+        width: 100%;
+    }
+
     .video-iframe {
         width: 90vw;
         margin: 0 auto;
@@ -482,6 +865,43 @@
 }
 
 @media screen and (max-width: 550px) {
+
+    .add-review-modal-left-body-form-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .review-text, .add-review-modal-btn.btn {
+        grid-column: auto;
+    }
+
+    .news-item-content {
+        gap: 30px;
+    }
+
+    .cover-news-item .h1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-new-clothe,
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-sale-block {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day {
+        height: 70px;
+    }
+
+    .about-page-sale-image {
+        max-width: 90vw;
+        height: auto;
+    }
+
+    .about-page-sale-image img {
+        width: 100%;
+    }
+
     .btn.coupon-btn {
         font-size: 20px;
         line-height: 24px;
@@ -530,14 +950,81 @@
     }
 }
 
-
 @media screen and (max-width: 525px) {
+
+    .address-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .swiper-city-filter.swiper-slide {
+        font-size: 14px;
+    }
+
+    .job-opening-success-modal-header .h1 {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .job-opening-success-modal-header .job-opening-tag,
+    .job-opening-success-modal-footer p {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+    }
+
+    .job-opening-left {
+        align-items: flex-start;
+    }
+
+    .job-opening-selected-inputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal-content.main-modal {
+        padding: 20px 10px;
+    }
+
     .mobile-calendar-trigger {
         left: -24vw;
+    }
+
+    .big-calendar-date-section.stocks {
+        gap: 5px;
     }
 }
 
 @media screen and (max-width: 440px) {
+
+    .add-review-modal-right-body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .add-review-modal-right-body .big-grid {
+        grid-column: 1/5;
+    }
+
+    .add-review-modal-right-body .custom-input-file.small:last-of-type {
+        display: none;
+    }
+
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-new-clothe,
+    .big-calendar-date-section.stocks .big-calendar-day .big-calendar-sale-block {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .about-page-img.cooperation:before {
+        left: 25px;
+    }
+
+    .slogan-cooperation {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
     .stock-container .tabs__caption {
         left: -31%;
     }
@@ -547,13 +1034,15 @@
     }
 
     .mobile-small-calendar {
-        left: 31px;
-        margin-top: -31px;
+        left: 10px;
+        margin-top: -10px;
     }
 
     .body-calendar {
         max-width: 280px;
     }
+
+
 }
 
 @media screen and (max-width: 400px) {
@@ -563,6 +1052,11 @@
 }
 
 @media screen and (max-width: 375px) {
+
+    .big-calendar-date-section.stocks {
+        gap: 2px;
+    }
+
     .stock-container .tabs__caption {
         left: -35%;
     }

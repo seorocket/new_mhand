@@ -6,10 +6,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Мегахенд</title>
 </head>
 <body>
@@ -23,7 +24,49 @@
             <div class="btn header-btn">войти</div>
         </div>
     </div>
+    <div class="mobile-header container">
+        <a href="#offcanvasExample" data-bs-toggle="offcanvas" aria-controls="offcanvasTop" class="mobile-menu"></a>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+        <div class="btn mobile-header-btn"><img src="static/images/icons/ic-login.png" alt=""></div>
+    </div>
 </header>
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container-mobile-menu container">
+            <nav>
+                <ul class="mobile-nav">
+                    <li>
+                        <span class="mobile-dropdown-trigger">О компании <i class="fa-solid fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li>
+                                <span class="mobile-sub-dropdown-trigger">Сотрудничество <i
+                                        class="fa-solid fa-chevron-down"></i></span>
+                                <ul class="mobile-sub-dropdown">
+                                    <li><a href="">Арендодателям</a></li>
+                                    <li><a href="">Оптовикам (ветошь)</a></li>
+                                    <li><a href="">Реклама у нас</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Блог</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Акции</a></li>
+                    <li><a href="">Наши коллекции</a></li>
+                    <li><a href="">Бренды</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Вакансии</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
 <main>
     <section>
         <nav>
@@ -63,47 +106,49 @@
     </section>
     <section>
         <div class="container about-page-container">
-            <div class="about-page-img">
-                <img src="static/images/models/h11-shop-img-8%202.png" alt="">
-                <div class="about-page-slogan-container">
-                    <div class="about-page-slogan">
-                        Один раз купив в МЕГАХЕНДЕ, Вы забудете о других магазинах!
-                    </div>
-                </div>
+            <div class="title-block">
+                <p>МЕГАХЕНД – ЭТО СЕТЬ СЕКОНДХЭНДОВ ПО ВСЕЙ РОССИИ</p>
             </div>
-            <div class="about-page-content-container">
-                <div class="title-block">
-                    <p>МЕГАХЕНД – ЭТО СЕТЬ СЕКОНДХЭНДОВ ПО ВСЕЙ РОССИИ</p>
+            <div class="about-page-main-content">
+                <div class="about-page-img">
+                    <img src="static/images/models/h11-shop-img-8%202.png" alt="">
+                    <div class="about-page-slogan-container">
+                        <div class="about-page-slogan">
+                            Один раз купив в МЕГАХЕНДЕ, Вы забудете о других магазинах!
+                        </div>
+                    </div>
                 </div>
-                <div class="about-page-content">
-                    <div class="custom-point">
-                        <div class="point"></div>
-                        <p>Уникальная система скидок - до 90%!</p>
-                    </div>
-                    <div class="custom-point">
-                        <div class="point"></div>
-                        <p>Европейские бренды – по доступным ценам!</p>
-                    </div>
-                    <div class="custom-point">
-                        <div class="point"></div>
-                        <p>Бесконечное разнообразие одежды для женщин, мужчин и детей – от 8 000 моделей в торговом
-                            зале!</p>
-                    </div>
-                    <div class="custom-point">
-                        <div class="point"></div>
-                        <p>Огромный выбор обуви, аксессуаров и товаров для дома!</p>
-                    </div>
-                    <div class="custom-point">
-                        <div class="point"></div>
-                        <p>Комфортные торговые залы площадью до 1000 кв.м.!</p>
-                    </div>
-                    <div class="custom-point">
-                        <div class="point"></div>
-                        <p>Обновление товара каждую неделю!</p>
-                    </div>
-                    <div class="custom-point">
-                        <div class="point"></div>
-                        <p>И, конечно, приятная атмосфера для неспешного шопинга!</p>
+                <div class="about-page-content-container">
+                    <div class="about-page-content">
+                        <div class="custom-point">
+                            <div class="point"></div>
+                            <p>Уникальная система скидок - до 90%!</p>
+                        </div>
+                        <div class="custom-point">
+                            <div class="point"></div>
+                            <p>Европейские бренды – по доступным ценам!</p>
+                        </div>
+                        <div class="custom-point">
+                            <div class="point"></div>
+                            <p>Бесконечное разнообразие одежды для женщин, мужчин и детей – от 8 000 моделей в торговом
+                                зале!</p>
+                        </div>
+                        <div class="custom-point">
+                            <div class="point"></div>
+                            <p>Огромный выбор обуви, аксессуаров и товаров для дома!</p>
+                        </div>
+                        <div class="custom-point">
+                            <div class="point"></div>
+                            <p>Комфортные торговые залы площадью до 1000 кв.м.!</p>
+                        </div>
+                        <div class="custom-point">
+                            <div class="point"></div>
+                            <p>Обновление товара каждую неделю!</p>
+                        </div>
+                        <div class="custom-point">
+                            <div class="point"></div>
+                            <p>И, конечно, приятная атмосфера для неспешного шопинга!</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,29 +179,32 @@
     </section>
     <section class="about-page-sale-section">
         <div class="container about-page-sale-container">
-            <div class="about-page-cale-text">
-                <div class="about-h2">Уникальная система скидок МЕГАХЕНД</div>
-                <div class="about-page-sale-content">
-                    <p>Все, конечно, знают о секонд-хенде. Но МЕГАХЕНД – не просто магазины модной одежды секонд-хенд,
-                        это
-                        торговая сеть федерального масштаба, которая предлагает абсолютно новый уровень качества и
-                        сервиса.
-                        Основа нашей работы– создание удобства и комфорта для покупателей и самый высокий уровень
-                        обслуживания!</p>
-                    <p>В МЕГАХЕНД представлена одежда, которая не подходит под классическое определение «секонд-хенд»: у
-                        нас
-                        продаются вещи, поступающие напрямую только из Европы, обладающие безупречным качеством и
-                        отличным
-                        внешним видом. Одежда в наши магазины поступает со стоков и является практически новой,
-                        некоторые
-                        модели – премиального уровня.</p>
+            <div class="about-page-sale-main-content">
+                <div class="about-page-cale-text">
+                    <div class="about-h2">Уникальная система скидок МЕГАХЕНД</div>
+                    <div class="about-page-sale-content">
+                        <p>Все, конечно, знают о секонд-хенде. Но МЕГАХЕНД – не просто магазины модной одежды секонд-хенд,
+                            это
+                            торговая сеть федерального масштаба, которая предлагает абсолютно новый уровень качества и
+                            сервиса.
+                            Основа нашей работы– создание удобства и комфорта для покупателей и самый высокий уровень
+                            обслуживания!</p>
+                        <p>В МЕГАХЕНД представлена одежда, которая не подходит под классическое определение «секонд-хенд»: у
+                            нас
+                            продаются вещи, поступающие напрямую только из Европы, обладающие безупречным качеством и
+                            отличным
+                            внешним видом. Одежда в наши магазины поступает со стоков и является практически новой,
+                            некоторые
+                            модели – премиального уровня.</p>
+                    </div>
                 </div>
-                <div class="btn about-btn"><a href="stock.html">смотреть акции <span class="arrows-about"></span></a>
+                <div class="about-page-sale-image">
+                    <img src="static/images/Sale_clothe.png" alt="">
                 </div>
             </div>
-            <div class="about-page-sale-image">
-                <img src="static/images/Sale_clothe.png" alt="">
-            </div>
+
+            <div class="btn about-btn"><a href="stock.html">смотреть акции <span class="arrows-about"></span></a></div>
+
         </div>
     </section>
     <section class="about-page-new-clothe-section">
@@ -237,7 +285,9 @@
     </div>
 
 </footer>
-<script src="static/js/sliders.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="static/bootsrap/js/bootstrap.bundle.min.js"></script>
 <script src="static/js/index.js"></script>
 </body>
 </html>

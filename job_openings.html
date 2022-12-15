@@ -6,10 +6,12 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="static/jquery-ui/jquery-ui.min.css"/>
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Мегахенд</title>
 </head>
 <body>
@@ -23,7 +25,49 @@
             <div class="btn header-btn">войти</div>
         </div>
     </div>
+    <div class="mobile-header container">
+        <a href="#offcanvasExample" data-bs-toggle="offcanvas" aria-controls="offcanvasTop" class="mobile-menu"></a>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+        <div class="btn mobile-header-btn"><img src="static/images/icons/ic-login.png" alt=""></div>
+    </div>
 </header>
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container-mobile-menu container">
+            <nav>
+                <ul class="mobile-nav">
+                    <li>
+                        <span class="mobile-dropdown-trigger">О компании <i class="fa-solid fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li>
+                                <span class="mobile-sub-dropdown-trigger">Сотрудничество <i
+                                        class="fa-solid fa-chevron-down"></i></span>
+                                <ul class="mobile-sub-dropdown">
+                                    <li><a href="">Арендодателям</a></li>
+                                    <li><a href="">Оптовикам (ветошь)</a></li>
+                                    <li><a href="">Реклама у нас</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Блог</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Акции</a></li>
+                    <li><a href="">Наши коллекции</a></li>
+                    <li><a href="">Бренды</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Вакансии</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
 <main>
     <!--modals-->
 
@@ -151,7 +195,8 @@
                 <div class="modal-body">
                     <div class="job-opening-modal-body">
                         <div class="job-opening-left">
-                            <input type="text" name="name" placeholder="Фамилия Имя Отчество" class="name required modal-input">
+                            <input type="text" name="name" placeholder="Фамилия Имя Отчество"
+                                   class="name required modal-input">
                             <input type="text" id="datepicker" class="modal-input" placeholder="Дата рождения">
                             <div class="job-opening-selected">
                                 <span>Ваше гражданство</span>
@@ -174,7 +219,8 @@
                                                class="job-opening-checkbox criminal-checkbox">
                                         <label for="criminal">Нет</label>
                                     </div>
-                                    <input type="text" name="criminal" class="criminal-input modal-input" placeholder="Другое">
+                                    <input type="text" name="criminal" class="criminal-input modal-input"
+                                           placeholder="Другое">
                                 </div>
                             </div>
                             <div class="job-opening-selected">
@@ -185,7 +231,8 @@
                                                class="job-opening-checkbox disability-checkbox">
                                         <label for="disability">Нет</label>
                                     </div>
-                                    <input type="text" name="disability" class="disability-input modal-input" placeholder="Другое">
+                                    <input type="text" name="disability" class="disability-input modal-input"
+                                           placeholder="Другое">
                                 </div>
                             </div>
                             <div class="job-opening-selected">
@@ -203,7 +250,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="text" name="phone" placeholder="Номер телефона" class="phone required modal-input">
+                            <input type="text" name="phone" placeholder="Номер телефона"
+                                   class="phone required modal-input">
                         </div>
                         <div class="job-opening-right">
                             <textarea name="achievements" placeholder="Опишите Ваши достоинства"></textarea>
@@ -213,7 +261,8 @@
                         <div class="job-opening-footer">
                             <div class="job-opening-footer-left">
                                 <span>Нажимая кнопку “отправить” вы даете согласие на обработку персональных данных</span>
-                                <div class="btn about-btn send-job-btn"><a >ОТПРАВИТЬ АНКЕТУ<span class="arrows-about"></span></a>
+                                <div class="btn about-btn send-job-btn"><a>ОТПРАВИТЬ АНКЕТУ<span
+                                        class="arrows-about"></span></a>
                                 </div>
                             </div>
                             <div class="job-opening-footer-right">
@@ -849,7 +898,7 @@
                 <div class="title">
                     МЫ ГАРАНТИРУЕМ
                 </div>
-                <div class="about-page-content">
+                <div class="about-page-content guarantees">
                     <div class="custom-point">
                         <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
                         <p>Ежемесячные премии и дополнительные бонусы</p>
@@ -882,6 +931,56 @@
                         <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
                         <p>Стабильная зарплата без задержек</p>
                     </div>
+                </div>
+                <div class="mobile-guarantees-content">
+                    <div class="guarantees-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="guarantees-item swiper-slide">
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Ежемесячные премии и дополнительные бонусы</p>
+                                </div>
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Возможность карьерного роста</p>
+                                </div>
+                            </div>
+                            <div class="guarantees-item swiper-slide">
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Дополнительные скидки для сотрудников сети МЕГАХЭНД</p>
+                                </div>
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Удобный и гибкий график</p>
+                                </div>
+                            </div>
+                            <div class="guarantees-item swiper-slide">
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Официальное трудоустройство с первого дня, оплачиваемые отпуска и больничные
+                                        листы</p>
+                                </div>
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Стильная униформа компании</p>
+                                </div>
+                            </div>
+                            <div class="guarantees-item swiper-slide">
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Оплачиваемые учебные отпуска и возможность проходить практику</p>
+                                </div>
+                                <div class="custom-point">
+                                    <div class="point guarantees"><img src="static/images/icons/done.png" alt=""></div>
+                                    <p>Стабильная зарплата без задержек</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar-guarantees stock-scrollbar"></div>
+                    <div class="next-guarantees-slider stock-slider-arrow"><img
+                            src="static/images/icons/icons8-slide-up-64.png" alt=""></div>
                 </div>
             </div>
         </div>

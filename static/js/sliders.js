@@ -41,9 +41,11 @@ new Swiper('.stock-catalog-swiper-women', {
             slidesPerView: 2
         },
         1000:{
+            spaceBetween: 30,
             slidesPerView: 3
         },
         1400:{
+            spaceBetween: 30,
             slidesPerView: 4
         }
     }
@@ -68,9 +70,11 @@ new Swiper('.stock-catalog-swiper-man', {
             slidesPerView: 2
         },
         1000:{
+            spaceBetween: 30,
             slidesPerView: 3
         },
         1400:{
+            spaceBetween: 30,
             slidesPerView: 4
         }
     }
@@ -94,9 +98,11 @@ new Swiper('.stock-catalog-swiper-child', {
             slidesPerView: 2
         },
         1000:{
+            spaceBetween: 30,
             slidesPerView: 3
         },
         1400:{
+            spaceBetween: 30,
             slidesPerView: 4
         }
     }
@@ -156,14 +162,42 @@ new Swiper('.brand-swiper', {
         draggable: true,
     },
     breakpoints: {
-        668: {
-        },
         768: {
             spaceBetween: 30,
             slidesPerView: 3
         },
         1400:{
+            spaceBetween: 30,
             slidesPerView: 4
+        }
+    }
+})
+new Swiper('.guarantees-swiper', {
+    slidesPerView: 1,
+    observe: true,
+    observeParents: true,
+    setWrapperSize: true,
+    navigation: {
+        nextEl: '.next-guarantees-slider',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar-guarantees',
+        draggable: true,
+    }
+})
+new Swiper('.swiper-city-filter', {
+    slidesPerView: 7,
+    slidesPerGroup: 7,
+    observe: true,
+    observeParents: true,
+    setWrapperSize: true,
+    navigation: {
+        nextEl: '.filter-arrow',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 12,
+            slidesPerGroup: 12,
         }
     }
 })
