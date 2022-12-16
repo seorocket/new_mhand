@@ -936,6 +936,26 @@ nav {
     margin-bottom: 30px;
 }
 
+.our-collection-btn{
+    position: relative;
+}
+
+.our-collection-btn span{
+    position: relative;
+    z-index: 2;
+}
+
+.our-collection-btn:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #3359A4;
+    opacity: .6;
+}
+
 .arrows-about.filter-arrow{
     position: absolute;
     right: -20px;
