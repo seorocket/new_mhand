@@ -6,14 +6,775 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>Мегахенд</title>
 </head>
+<body>
+<header>
+    <div class="container header-container">
+        <div class="location location-modal"><img src="static/images/icons/icons8-location-96.png"> Москва</div>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+        <div class="top-header-right">
+            <div class="phone-section"><img src="static/images/icons/" alt=""><i class="fa-solid fa-phone"></i> <a
+                    href="tel:+78002506168">8(800) 250-61-68</a></div>
+        </div>
+    </div>
+    <div class="mobile-header container">
+        <a href="#offcanvasExample" data-bs-toggle="offcanvas" aria-controls="offcanvasTop" class="mobile-menu"></a>
+        <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
+    </div>
+</header>
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container-mobile-menu container">
+            <nav>
+                <ul class="mobile-nav">
+                    <li>
+                        <span class="mobile-dropdown-trigger">О компании <i class="fa-solid fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li>
+                                <span class="mobile-sub-dropdown-trigger">Сотрудничество <i
+                                        class="fa-solid fa-chevron-down"></i></span>
+                                <ul class="mobile-sub-dropdown">
+                                    <li><a href="">Арендодателям</a></li>
+                                    <li><a href="">Оптовикам (ветошь)</a></li>
+                                    <li><a href="">Реклама у нас</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Блог</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Акции</a></li>
+                    <li><a href="">Наши коллекции</a></li>
+                    <li><a href="">Бренды</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Вакансии</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--modals-->
+
+<div class="modal fade" id="mainModal" aria-labelledby="mainModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content coupon">
+            <div class="modal-header coupon">
+                <div class="modal-title" id="couponModalLabel">СКИДОЧНЫЙ КУПОН</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="tabs">
+                    <ul class="tabs__caption">
+                        <li class="active">ПОЛУЧИ 300 РУБ.</li>
+                        <li>ПОЛУЧИ 500 РУБ.</li>
+                    </ul>
+                    <div class="tabs__content active">
+                        <div class="coupon-header">
+                            <div class="coupon-title">
+                                ПОЛУЧИТЕ 300 РУБЛЕЙ
+                            </div>
+                            <div class="coupon-description">
+                                Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую
+                                покупку с выгодой!
+                            </div>
+                        </div>
+                        <div class="coupon-form">
+                            <div class="coupon-inputs">
+                                <input type="text" class="coupon-input name required" name="name"
+                                       placeholder="Алёна">
+                                <input type="phone" class="coupon-input phone required" name="phone"
+                                       placeholder="+7(123)456-78-90">
+                                <select class="coupon-input required select-city-coupon" name="city"
+                                        placeholder="Выбрать город">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                            </div>
+                            <div class="agreement-coupon-section">
+                                <div class="agreement-custom-input">
+                                    <input type="checkbox" name="agreement" class="agreement required"
+                                           id="agreement-coupon">
+                                    <label for="agreement-coupon">Я ознакомлен(а) с условиями <a
+                                            href="agreement.html">публичной оферты и условиями проведения
+                                        акции</a></label>
+                                </div>
+                                <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                            </div>
+                            <div class="get-coupon-btn btn">получить</div>
+                        </div>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="coupon-header">
+                            <div class="coupon-title">
+                                ПОЛУЧИТЕ 500 РУБЛЕЙ
+                            </div>
+                            <div class="coupon-description">
+                                Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую
+                                покупку с выгодой!
+                            </div>
+                        </div>
+                        <div class="coupon-form">
+                            <div class="coupon-inputs">
+                                <input type="text" class="coupon-input name required" name="name"
+                                       placeholder="Ваше имя">
+                                <input type="phone" class="coupon-input phone required" name="phone"
+                                       placeholder="Ваш Телефон">
+                                <select class="coupon-input required select-city-coupon" name="city"
+                                        placeholder="Выбрать город">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                                <input type="phone" class="coupon-input phone required" name="phone"
+                                       placeholder="Телефон друга">
+                                <select class="coupon-input required select-city-coupon" name="city"
+                                        placeholder="Город друга">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                                <input type="phone" class="coupon-input phone required" name="phone"
+                                       placeholder="Телефон друга">
+                                <select class="coupon-input required select-city-coupon" name="city"
+                                        placeholder="Город друга">
+                                    <option></option>
+                                    <option value="367">Абаза</option>
+                                    <option value="340">Абакан</option>
+                                    <option value="369">Абдулино</option>
+                                    <option value="370">Абинск</option>
+                                    <option value="371">Агидель</option>
+                                </select>
+                            </div>
+                            <div class="agreement-coupon-section">
+
+                                <div class="agreement-custom-input">
+                                    <input type="checkbox" name="agreement" class="agreement required"
+                                           id="agreement-coupon">
+                                    <label for="agreement-coupon">Я ознакомлен(а) с условиями <a
+                                            href="agreement.html">публичной оферты и условиями проведения
+                                        акции</a></label>
+                                </div>
+                                <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
+                            </div>
+                            <div class="get-coupon-btn btn">получить</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content main-modal">
+            <div class="modal-header">
+                <div class="modal-title" id="mainModalLabel"></div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="job-opening-modal-body">
+                    <div class="job-opening-left">
+                        <input type="text" name="name" placeholder="Фамилия Имя Отчество"
+                               class="name required modal-input">
+                        <input type="text" id="datepicker" class="modal-input" placeholder="Дата рождения">
+                        <div class="job-opening-selected">
+                            <span>Ваше гражданство</span>
+                            <div class="job-opening-selected-inputs">
+                                <div class="job-opening-selected-inputs-checkbox">
+                                    <input type="checkbox" id="citizenship"
+                                           class="job-opening-checkbox citizenship-checkbox">
+                                    <label for="citizenship">РФ</label>
+                                </div>
+                                <input type="text" name="citizenship" class="citizenship-input modal-input"
+                                       placeholder="Другое">
+                            </div>
+                        </div>
+                        <div class="job-opening-selected">
+                            <span>Были ли у Вас административные, уголовные, гражданские
+иски, судимости? Если да, по каким статьям?</span>
+                            <div class="job-opening-selected-inputs">
+                                <div class="job-opening-selected-inputs-checkbox">
+                                    <input type="checkbox" id="criminal"
+                                           class="job-opening-checkbox criminal-checkbox">
+                                    <label for="criminal">Нет</label>
+                                </div>
+                                <input type="text" name="criminal" class="criminal-input modal-input"
+                                       placeholder="Другое">
+                            </div>
+                        </div>
+                        <div class="job-opening-selected">
+                            <span>Есть ли у Вас физические ограничения\инвалидность?</span>
+                            <div class="job-opening-selected-inputs">
+                                <div class="job-opening-selected-inputs-checkbox">
+                                    <input type="checkbox" id="disability"
+                                           class="job-opening-checkbox disability-checkbox">
+                                    <label for="disability">Нет</label>
+                                </div>
+                                <input type="text" name="disability" class="disability-input modal-input"
+                                       placeholder="Другое">
+                            </div>
+                        </div>
+                        <div class="job-opening-selected">
+                            <span>Есть ли у Вас опыт работы на кассе?</span>
+                            <div class="job-opening-selected-inputs">
+                                <div class="job-opening-selected-inputs-checkbox">
+                                    <input type="radio" name="box-office" id="box-office-yes"
+                                           class="job-opening-checkbox disability-checkbox">
+                                    <label for="box-office-yes">Да</label>
+                                </div>
+                                <div class="job-opening-selected-inputs-checkbox">
+                                    <input type="radio" name="box-office" id="box-office-no"
+                                           class="job-opening-checkbox box-office-checkbox">
+                                    <label for="box-office-no">Нет</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" name="phone" placeholder="Номер телефона"
+                               class="phone required modal-input">
+                    </div>
+                    <div class="job-opening-right">
+                        <textarea name="achievements" placeholder="Опишите Ваши достоинства"></textarea>
+                        <textarea name="disadvantages" placeholder="Опишите Ваши недостатки"></textarea>
+                        <textarea name="why-are-we" placeholder="Почему Вы хотите работать у нас?"></textarea>
+                    </div>
+                    <div class="job-opening-footer">
+                        <div class="job-opening-footer-left">
+                            <span>Нажимая кнопку “отправить” вы даете согласие на обработку персональных данных</span>
+                            <div class="btn about-btn send-job-btn"><a>ОТПРАВИТЬ АНКЕТУ<span
+                                    class="arrows-about"></span></a>
+                            </div>
+                        </div>
+                        <div class="job-opening-footer-right">
+                            <img src="static/images/logo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="add-review-modal-body">
+                    <div class="add-review-modal-left">
+                        <div class="add-review-modal-left-header">
+                            <div class="title">мегахенд г.тольятти</div>
+                            <span>г.Тольятти, ул. Мира, 62 <br>
+                                ТЦ “Миндаль”</span>
+                            <div class="selected-review">
+                                <div class="add-review-select">отзывы</div>
+                                <div class="review-select">оставить отзыв</div>
+                            </div>
+                        </div>
+                        <div class="add-review-modal-left-body">
+                            <div class="add-review-modal-left-body-avatar-section">
+                                <div class="input-avatar">
+                                    <label for="input-avatar"><img src="static/images/models/Girl_1_1-600x700.jpg"
+                                                                   alt=""></label>
+                                    <input type="file" id="input-avatar">
+                                </div>
+                                <p class="nik-name">@nikname99</p>
+                            </div>
+                            <div class="add-review-modal-left-body-form-section">
+                                <input type="text" class="review-input name required" placeholder="Введите Ваше Имя">
+                                <input type="text" class="review-input email required" placeholder="mhand@yandex.ru">
+                                <textarea type="text" class="review-input review-text required"
+                                          placeholder="Ваш отзыв"></textarea>
+                                <div class="add-review-modal-btn btn">Оставить отзыв</div>
+                            </div>
+                        </div>
+                        <div class="add-review-modal-left-footer">
+                            <p>Все комментарии и отзывы проверяются модераторами. Отправлять отзывы могут только
+                                зарегистрированные пользователи сайта</p>
+                        </div>
+                    </div>
+                    <div class="add-review-modal-right">
+                        <div class="add-review-modal-right-header">Добавьте до 9 фотографий*</div>
+                        <div class="add-review-modal-right-body">
+                            <div class="big-grid">
+                                <div class="custom-input-file">
+                                    <input type="file" name="photo" id="photo1" class="photo-input">
+                                    <label for="photo1"></label>
+                                </div>
+                                <div class="custom-input-file">
+                                    <input type="file" name="photo" id="photo2" class="photo-input">
+                                    <label for="photo2"></label>
+                                </div>
+                                <div class="custom-input-file">
+                                    <input type="file" name="photo" id="photo3" class="photo-input">
+                                    <label for="photo3"></label>
+                                </div>
+                                <div class="custom-input-file">
+                                    <input type="file" name="photo" id="photo4" class="photo-input">
+                                    <label for="photo4"></label>
+                                </div>
+                            </div>
+                            <div class="custom-input-file">
+                                <input type="file" name="photo" id="photo5" class="photo-input">
+                                <label for="photo5"></label>
+                            </div>
+                            <div class="custom-input-file">
+                                <input type="file" name="photo" id="photo6" class="photo-input">
+                                <label for="photo6"></label>
+                            </div>
+                            <div class="custom-input-file">
+                                <input type="file" name="photo" id="photo7" class="photo-input">
+                                <label for="photo7"></label>
+                            </div>
+                            <div class="custom-input-file">
+                                <input type="file" name="photo" id="photo8" class="photo-input">
+                                <label for="photo8"></label>
+                            </div>
+                            <div class="custom-input-file">
+                                <input type="file" name="photo" id="photo9" class="photo-input">
+                                <label for="photo9"></label>
+                            </div>
+                        </div>
+                        <div class="add-review-modal-right-footer">Необязательно*</div>
+                    </div>
+                </div>
+                .
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="successModal" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content main-modal">
+            <div class="modal-header">
+                <div class="modal-title" id="successModalLabel"></div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="job-opening-success-modal">
+                    <div class="job-opening-success-modal-header">
+                        <div class="h1">СПАСИБО ЗА ОТКЛИК НА ВАКАНСИЮ</div>
+                        <div class="job-opening-tag">ПРОДАВЕЦ-КОНСУЛЬТАНТ “МЕГАХЕНД”</div>
+                    </div>
+                    <div class="job-opening-success-modal-footer">
+                        <p>Мы свяжемся с Вами в течение двух дней! <br>
+                            Ожидайте звонка менеджера!</p>
+                    </div>
+                </div>
+                <div class="review-success-modal">
+                    <div class="review-success-modal-header">
+                        <div class="h1">СПАСИБО ЗА ОТЗЫВ НА МАГАЗИН</div>
+                        <div class="review-tag">
+                            <span class="review-city">МЕГАХЕНД Г.ТОЛЬЯТТИ</span>
+                            <span class="review-address-modal">г.Тольятти, ул. Мира, 62, ТЦ “Миндаль”</span>
+                        </div>
+                    </div>
+                    <div class="review-success-modal-footer">
+                        <p>Отзыв будет опубликован после проверки модераторов!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="calendarModal" aria-labelledby="calendarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content main-modal">
+            <div class="big-calendar active calendar">
+                <div class="header-calendar">
+                    <img src="static/images/icons/ic-share.png" class="share-btn">
+                    <p>календарь скидок</p>
+                    <div class="close-icon" data-bs-dismiss="modal" aria-label="Закрыть"><i
+                            class="fa-solid fa-xmark"></i></div>
+                </div>
+                <div class="body-calendar big">
+                    <div class="swiper swiper-sale-big-calendar">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide big-calendar-item">
+                                <div class="big-calendar-item-header">
+                                    <span class="prev-sale-arrow slider-arrows-prev big"></span>
+                                    январь
+                                    <span class="next-sale-arrow slider-arrows-next big"></span>
+                                </div>
+                                <div class="big-calendar-item-body">
+                                    <div class="big-calendar-week-section">
+                                        <p>пн</p>
+                                        <p>вт</p>
+                                        <p>ср</p>
+                                        <p>чт</p>
+                                        <p>пт</p>
+                                        <p>сб</p>
+                                        <p>вс</p>
+                                    </div>
+                                    <div class="big-calendar-date-section">
+                                        <div class="big-calendar-day empty">
+                                            <div class="big-calendar-day-header">29</div>
+                                            <div class="big-calendar-day-body"></div>
+                                        </div>
+                                        <div class="big-calendar-day empty">
+                                            <div class="big-calendar-day-header">30</div>
+                                            <div class="big-calendar-day-body"></div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide big-calendar-item">
+                                <div class="big-calendar-item-header">
+                                    <span class="prev-sale-arrow slider-arrows-prev big"></span>
+                                    февраль
+                                    <span class="next-sale-arrow slider-arrows-next big"></span>
+                                </div>
+                                <div class="big-calendar-item-body">
+                                    <div class="big-calendar-week-section">
+                                        <p>пн</p>
+                                        <p>вт</p>
+                                        <p>ср</p>
+                                        <p>чт</p>
+                                        <p>пт</p>
+                                        <p>сб</p>
+                                        <p>вс</p>
+                                    </div>
+                                    <div class="big-calendar-date-section">
+                                        <div class="big-calendar-day empty">
+                                            <div class="big-calendar-day-header">29</div>
+                                            <div class="big-calendar-day-body"></div>
+                                        </div>
+                                        <div class="big-calendar-day empty">
+                                            <div class="big-calendar-day-header">30</div>
+                                            <div class="big-calendar-day-body"></div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-sale-block">70<span>%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="big-calendar-day">
+                                            <div class="big-calendar-day-header">1</div>
+                                            <div class="big-calendar-day-body">
+                                                <div class="big-calendar-new-clothe">Новый завоз</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--end modals-->
 <main>
     <!--modals-->
 
@@ -445,13 +1206,12 @@
                         </div>
                     </div>
                     <div class="review-photo">
-                        <div id="current-review-photo"></div>
+                        <div class="current-review-photo"></div>
                         <div class="more-review-photo">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
+                            <div class="img-review-item"><img src="static/images/мег.jpg" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/architecture.jpg" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/background-girl1.png" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/models/00137408-05.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -473,8 +1233,8 @@
                                     <div class="review-item">
                                         <img src="static/images/models/Girl_1_1-600x700.jpg" alt="">
                                         <div class="review-text">
-                                            <div class="name-review">Наталья Чвикалова</div>
-                                            <p>Сегодня впервые получила купон на одежду. Вообще, никогда не пользовалась
+                                            <div class="name-review">алена Чвикалова</div>
+                                            <p> тест Сегодня впервые получила купон на одежду. Вообще, никогда не пользовалась
                                                 такими акциями, и решила вдруг испробовать это у МЕГАХЕНДА. Они подарили
                                                 мне купон 500р н абсолютно любую вещь. Так я и выбрарала себе три
                                                 платья, одно из кторых стоило всего 1 рубль, благодаря купону. На третью
@@ -527,13 +1287,12 @@
                         </div>
                     </div>
                     <div class="review-photo">
-                        <div id="current-review-photo"></div>
+                        <div class="current-review-photo"></div>
                         <div class="more-review-photo">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
+                            <div class="img-review-item"><img src="static/images/мег.jpg" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/architecture.jpg" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/background-girl1.png" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/models/00137408-05.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -555,8 +1314,8 @@
                                     <div class="review-item">
                                         <img src="static/images/models/Girl_1_1-600x700.jpg" alt="">
                                         <div class="review-text">
-                                            <div class="name-review">Наталья Чвикалова</div>
-                                            <p>Сегодня впервые получила купон на одежду. Вообще, никогда не пользовалась
+                                            <div class="name-review">алена Чвикалова</div>
+                                            <p> тест Сегодня впервые получила купон на одежду. Вообще, никогда не пользовалась
                                                 такими акциями, и решила вдруг испробовать это у МЕГАХЕНДА. Они подарили
                                                 мне купон 500р н абсолютно любую вещь. Так я и выбрарала себе три
                                                 платья, одно из кторых стоило всего 1 рубль, благодаря купону. На третью
@@ -609,13 +1368,12 @@
                         </div>
                     </div>
                     <div class="review-photo">
-                        <div id="current-review-photo"></div>
+                        <div class="current-review-photo"></div>
                         <div class="more-review-photo">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
-                            <img src="static/images/мег.jpg" alt="">
+                            <div class="img-review-item"><img src="static/images/мег.jpg" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/architecture.jpg" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/background-girl1.png" alt=""></div>
+                            <div class="img-review-item"><img src="static/images/models/00137408-05.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,7 @@
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="static/wowjs/css/libs/animate.css">
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -22,13 +23,11 @@
         <div class="top-header-right">
             <div class="phone-section"><img src="static/images/icons/" alt=""><i class="fa-solid fa-phone"></i> <a
                     href="tel:+78002506168">8(800) 250-61-68</a></div>
-            <div class="btn header-btn">войти</div>
         </div>
     </div>
     <div class="mobile-header container">
         <a href="#offcanvasExample" data-bs-toggle="offcanvas" aria-controls="offcanvasTop" class="mobile-menu"></a>
         <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
-        <div class="btn mobile-header-btn"><img src="static/images/icons/ic-login.png" alt=""></div>
     </div>
 </header>
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -43,7 +42,8 @@
                         <span class="mobile-dropdown-trigger">О компании <i class="fa-solid fa-chevron-down"></i></span>
                         <ul class="mobile-dropdown">
                             <li>
-                                <span class="mobile-sub-dropdown-trigger">Сотрудничество <i class="fa-solid fa-chevron-down"></i></span>
+                                <span class="mobile-sub-dropdown-trigger">Сотрудничество <i
+                                        class="fa-solid fa-chevron-down"></i></span>
                                 <ul class="mobile-sub-dropdown">
                                     <li><a href="">Арендодателям</a></li>
                                     <li><a href="">Оптовикам (ветошь)</a></li>
@@ -110,9 +110,10 @@
                             <div class="agreement-coupon-section">
                                 <div class="agreement-custom-input">
                                     <input type="checkbox" name="agreement" class="agreement required"
-                                           id="agreement-coupon">
+                                           id="agreement-coupon" checked>
                                     <label for="agreement-coupon">Я ознакомлен(а) с условиями <a
-                                            href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                            href="agreement.html">публичной оферты и условиями проведения
+                                        акции</a></label>
                                 </div>
                                 <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
                             </div>
@@ -173,7 +174,8 @@
                                     <input type="checkbox" name="agreement" class="agreement required"
                                            id="agreement-coupon">
                                     <label for="agreement-coupon">Я ознакомлен(а) с условиями <a
-                                            href="agreement.html">публичной оферты и условиями проведения акции</a></label>
+                                            href="agreement.html">публичной оферты и условиями проведения
+                                        акции</a></label>
                                 </div>
                                 <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
                             </div>
@@ -280,7 +282,8 @@
                         <div class="add-review-modal-left-body">
                             <div class="add-review-modal-left-body-avatar-section">
                                 <div class="input-avatar">
-                                    <label for="input-avatar"><img src="static/images/models/Girl_1_1-600x700.jpg" alt=""></label>
+                                    <label for="input-avatar"><img src="static/images/models/Girl_1_1-600x700.jpg"
+                                                                   alt=""></label>
                                     <input type="file" id="input-avatar">
                                 </div>
                                 <p class="nik-name">@nikname99</p>
@@ -288,7 +291,8 @@
                             <div class="add-review-modal-left-body-form-section">
                                 <input type="text" class="review-input name required" placeholder="Введите Ваше Имя">
                                 <input type="text" class="review-input email required" placeholder="mhand@yandex.ru">
-                                <textarea type="text" class="review-input review-text required" placeholder="Ваш отзыв"></textarea>
+                                <textarea type="text" class="review-input review-text required"
+                                          placeholder="Ваш отзыв"></textarea>
                                 <div class="add-review-modal-btn btn">Оставить отзыв</div>
                             </div>
                         </div>
@@ -365,16 +369,12 @@
                             Ожидайте звонка менеджера!</p>
                     </div>
                 </div>
-                <div class="review-success-modal">
-                    <div class="review-success-modal-header">
-                        <div class="h1">СПАСИБО ЗА ОТЗЫВ НА МАГАЗИН</div>
-                        <div class="review-tag">
-                            <span class="review-city">МЕГАХЕНД Г.ТОЛЬЯТТИ</span>
-                            <span class="review-address-modal">г.Тольятти, ул. Мира, 62, ТЦ “Миндаль”</span>
-                        </div>
+                <div class="coupon-success-modal">
+                    <div class="job-opening-success-modal-header">
+                        <div class="h1">Спасибо, ваша заявка принята.</div>
                     </div>
-                    <div class="review-success-modal-footer">
-                        <p>Отзыв будет опубликован после проверки модераторов!</p>
+                    <div class="job-opening-success-modal-footer">
+                        <p>Промокод отправлен вам по номеру телефона в SMS</p>
                     </div>
                 </div>
             </div>
@@ -388,7 +388,8 @@
                 <div class="header-calendar">
                     <img src="static/images/icons/ic-share.png" class="share-btn">
                     <p>календарь скидок</p>
-                    <div class="close-icon" data-bs-dismiss="modal" aria-label="Закрыть"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="close-icon" data-bs-dismiss="modal" aria-label="Закрыть"><i
+                            class="fa-solid fa-xmark"></i></div>
                 </div>
                 <div class="body-calendar big">
                     <div class="swiper swiper-sale-big-calendar">
@@ -772,7 +773,8 @@
 
 <!--end modals-->
 <main>
-    <sectionf>
+    <div class="progress-bar-custom" id="progress-bar-custom"></div>
+    <section>
         <div class="index">
             <nav>
                 <div class="container menu-container">
@@ -805,15 +807,17 @@
                 </div>
             </nav>
             <div class="container landing-block">
-                <div class="calendar-section">
+                <div class="calendar-section ">
                     <div class="small-calendar calendar">
                         <div class="header-calendar">
-                            <img src="static/images/icons/ic-share.png" class="share-btn">
+                            <script src="https://yastatic.net/share2/share.js"></script>
+                            <div class="ya-share2" data-curtain data-size="s" data-copy="last" data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
+
                             <p>календарь скидок</p>
                         </div>
                         <div class="body-calendar small">
                             <div class="all-sale">
-                                <div class="sale-item active">
+                                <div class="sale-item selected">
                                     <div class="sale-item-header">
                                         <p>3</p>
                                         <p>вт</p>
@@ -846,20 +850,68 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide swiper-sale-item">
                                         <p class="week-day">понедельник</p>
-                                        <p class="date">
-                                            <span class="prev-sale-arrow slider-arrows-prev"></span>
-                                            2 января
-                                            <span class="next-sale-arrow slider-arrows-next"></span>
-                                        </p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            3 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
                                         <p class="sale">70%</p>
                                     </div>
                                     <div class="swiper-slide swiper-sale-item">
                                         <p class="week-day">понедельник</p>
-                                        <p class="date">
-                                            <span class="prev-sale-arrow slider-arrows-prev"></span>
-                                            3 января
-                                            <span class="next-sale-arrow slider-arrows-next"></span>
-                                        </p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            4 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
+                                        <p class="sale">70%</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">понедельник</p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            5 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
+                                        <p class="sale">70%</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">понедельник</p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            6 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
+                                        <p class="sale">70%</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">понедельник</p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            7 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
+                                        <p class="sale">70%</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">понедельник</p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            8 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
                                         <p class="sale">70%</p>
                                     </div>
                                 </div>
@@ -867,16 +919,24 @@
                             <div class="shops shops-swiper swiper">
                                 <div class="swiper-wrapper">
                                     <div class="shop-item swiper-slide">
-                                        <span class="prev-shops-calendar-arrow"></span>
+                                        <div class="prev-shops-calendar-arrow">
+                                            <div class="prev-shops-calendar-arrow-content"></div>
+                                        </div>
                                         <p>Г.ТОЛЬЯТТИ, УЛ.МИРА, 62,
                                             ТЦ “МИНДАЛЬ”</p>
-                                        <span class="next-shops-calendar-arrow"></span>
+                                        <div class="next-shops-calendar-arrow">
+                                            <div class="next-shops-calendar-arrow-content"></div>
+                                        </div>
                                     </div>
                                     <div class="shop-item swiper-slide">
-                                        <span class="prev-shops-calendar-arrow"></span>
+                                        <div class="prev-shops-calendar-arrow">
+                                            <div class="prev-shops-calendar-arrow-content"></div>
+                                        </div>
                                         <p>Г.ТОЛЬЯТТИ, УЛ.МИРА, 62,
                                             ТЦ “МИНДАЛЬ”</p>
-                                        <span class="next-shops-calendar-arrow"></span>
+                                        <div class="next-shops-calendar-arrow">
+                                            <div class="next-shops-calendar-arrow-content"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -885,7 +945,9 @@
                     </div>
                     <div class="big-calendar calendar">
                         <div class="header-calendar">
-                            <img src="static/images/icons/ic-share.png" class="share-btn">
+                            <script src="https://yastatic.net/share2/share.js"></script>
+                            <div class="ya-share2" data-curtain data-size="s" data-copy="last" data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
+
                             <p>календарь скидок</p>
                             <div class="close-icon close-calendar"><i class="fa-solid fa-xmark"></i></div>
                         </div>
@@ -894,9 +956,11 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide big-calendar-item">
                                         <div class="big-calendar-item-header">
-                                            <span class="prev-sale-arrow slider-arrows-prev big"></span>
+                                            <div class="big-calendar-main-arrow-prev"><span
+                                                    class="prev-sale-arrow slider-arrows-prev big"></span></div>
                                             январь
-                                            <span class="next-sale-arrow slider-arrows-next big"></span>
+                                            <div class="big-calendar-main-arrow-next"><span
+                                                    class="next-sale-arrow slider-arrows-next big"></span></div>
                                         </div>
                                         <div class="big-calendar-item-body">
                                             <div class="big-calendar-week-section">
@@ -1281,7 +1345,7 @@
                                 <div class="small-calendar calendar">
                                     <div class="body-calendar small">
                                         <div class="all-sale">
-                                            <div class="sale-item active">
+                                            <div class="sale-item selected">
                                                 <div class="sale-item-header">
                                                     <p>3</p>
                                                     <p>вт</p>
@@ -1314,20 +1378,20 @@
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide swiper-sale-item">
                                                     <p class="week-day">понедельник</p>
-                                                    <p class="date">
-                                                        <span class="prev-sale-arrow slider-arrows-prev"></span>
-                                                        2 января
-                                                        <span class="next-sale-arrow slider-arrows-next"></span>
-                                                    </p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow"><span class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        3 января
+                                                        <div class="next-sale-main-arrow"><span class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
                                                     <p class="sale">70%</p>
                                                 </div>
-                                                <div class="swiper-slide swiper-sale-itemswiper-sale-item">
+                                                <div class="swiper-slide swiper-sale-item">
                                                     <p class="week-day">понедельник</p>
-                                                    <p class="date">
-                                                        <span class="prev-sale-arrow slider-arrows-prev"></span>
-                                                        3 января
-                                                        <span class="next-sale-arrow slider-arrows-next"></span>
-                                                    </p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow"><span class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        4 января
+                                                        <div class="next-sale-main-arrow"><span class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
                                                     <p class="sale">70%</p>
                                                 </div>
                                             </div>
@@ -1335,16 +1399,24 @@
                                         <div class="shops shops-swiper swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="shop-item swiper-slide">
-                                                    <span class="prev-shops-calendar-arrow"></span>
+                                                    <div class="prev-shops-calendar-arrow">
+                                                        <div class="prev-shops-calendar-arrow-content"></div>
+                                                    </div>
                                                     <p>Г.ТОЛЬЯТТИ, УЛ.МИРА, 62,
                                                         ТЦ “МИНДАЛЬ”</p>
-                                                    <span class="next-shops-calendar-arrow"></span>
+                                                    <div class="next-shops-calendar-arrow">
+                                                        <div class="next-shops-calendar-arrow-content"></div>
+                                                    </div>
                                                 </div>
                                                 <div class="shop-item swiper-slide">
-                                                    <span class="prev-shops-calendar-arrow"></span>
+                                                    <div class="prev-shops-calendar-arrow">
+                                                        <div class="prev-shops-calendar-arrow-content"></div>
+                                                    </div>
                                                     <p>Г.ТОЛЬЯТТИ, УЛ.МИРА, 62,
                                                         ТЦ “МИНДАЛЬ”</p>
-                                                    <span class="next-shops-calendar-arrow"></span>
+                                                    <div class="next-shops-calendar-arrow">
+                                                        <div class="next-shops-calendar-arrow-content"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1364,35 +1436,35 @@
                 </div>
             </div>
         </div>
-    </sectionf>
-    <section>
+    </section>
+    <section >
         <div class="container coupon-btn-section">
             <div class="coupon-btn btn _coupon-500"><p>получить купон на 500р</p></div>
         </div>
     </section>
-    <section>
+    <section class="wow fadeInUpBig" data-wow-duration="1s">
         <div class="container category">
             <div class="block-category">
                 <p>для неё</p>
-                <a href="our_our_collection.html" class="btn category-btn">
+                <a href="our_collection.html#women_collection" class="btn category-btn">
                     женская коллекция
                 </a>
             </div>
             <div class="block-category">
                 <p>для него</p>
-                <a href="our_our_collection.html" class="btn category-btn">
+                <a href="our_collection.html#man_collection" class="btn category-btn">
                     мужская коллекция
                 </a>
             </div>
             <div class="block-category">
                 <p>для детей</p>
-                <a href="our_our_collection.html" class="btn category-btn">
+                <a href="our_collection.html#children_collection" class="btn category-btn">
                     детская коллекция
                 </a>
             </div>
         </div>
     </section>
-    <section>
+    <section class="wow fadeInUpBig" data-wow-duration="1s">
         <div class="stock-container container">
             <div class="title-block">
                 <p>скидки на одежду</p>
@@ -1667,13 +1739,14 @@
             </div>
         </div>
     </section>
-    <section>
-        <iframe class="video-iframe" height="750px" src="https://www.youtube.com/embed/LZawF9zpoNc" title="YouTube video player"
+    <section class="wow fadeInUpBig" data-wow-duration="1s">
+        <iframe class="video-iframe" height="750px" src="https://www.youtube.com/embed/LZawF9zpoNc"
+                title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
     </section>
-    <section>
+    <section class="wow fadeInUpBig" data-wow-duration="1s">
         <div class="container container-about">
             <div class="title-block">
                 <p>о нас</p>
@@ -1699,7 +1772,7 @@
             </div>
         </div>
     </section>
-    <section class="brand-section">
+    <section class="brand-section wow fadeInUpBig" data-wow-duration="1s">
         <div class="container brand-container">
             <div class="title-block">
                 <p>бренды</p>
@@ -1747,7 +1820,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="wow fadeInUpBig" data-wow-duration="1s">
         <div class="container blog-container">
             <div class="title-block">
                 <p>наш блог</p>
@@ -1872,7 +1945,7 @@
             </div>
         </div>
     </section>
-    <section class="news-section">
+    <section class="news-section wow fadeInUpBig" data-wow-duration="1s">
         <div class="container news-container">
             <div class="title-block">
                 <p>новости</p>
@@ -2063,6 +2136,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="static/select2/dist/js/i18n/ru.js"></script>
+<script src="static/wowjs/dist/wow.min.js"></script>
+<script>
+    wow = new WOW({
+        mobile:false
+    })
+    wow.init();
+</script>
 <script>
     $(document).ready(function () {
         $('.select-city-coupon').select2(

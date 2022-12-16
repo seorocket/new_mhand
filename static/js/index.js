@@ -16,6 +16,21 @@
 //     })
 // })
 
+function progressBar() {
+    // Узнаем на сколько страница прокручена
+    let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+    // Узнаем высоту всей страницы
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Получаем в % на сколько прокручена страница
+    let scrolled = scroll / height * 100;
+
+    // Подставляем % прокрутки в ширину нашей линии
+    document.getElementById('progress-bar-custom').style.width = scrolled + '%';
+}
+
+// Запускаем функцию, когда пользователя скролит
+window.addEventListener('scroll', progressBar);
+
 $(document).ready(function () {
     $(function () {
         $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
@@ -176,13 +191,6 @@ $(document).ready(function () {
     })
 
     //calendar
-    $('.u-turn-btn').on('click', function () {
-        let element = $(this).prev().children('.blog-item-text-content')
-        element.removeClass('active')
-        $(this).css({'display': 'none'})
-        element.css({'max-height': element.children()[0].scrollHeight + 'px'})
-    })
-
     $('.calendar-btn-pc').on('click', function () {
         $('.small-calendar').removeClass('active').addClass('hidden')
         $('.big-calendar').removeClass('hidden').addClass('active')
@@ -202,6 +210,7 @@ $(document).ready(function () {
         $('.job-opening-modal-body').addClass('__d-none-modal')
         $('.add-review-modal-body').addClass('__d-none-modal')
         $('.review-success-modal').addClass('__d-none-modal')
+        $('.coupon-success-modal').addClass('__d-none-modal')
         // $('.calendarModal').addClass('__d-none-modal')
     }
 
@@ -213,6 +222,9 @@ $(document).ready(function () {
 
     $('.get-coupon-btn').click(function () {
         $('#mainModal').modal('hide')
+        $('.modal-content.main-modal').removeClass('__d-none-modal')
+        $('.coupon-success-modal').removeClass('__d-none-modal')
+        $('#successModal').modal('show')
     })
 
     $('.job-openings-modal-btn').on('click', function () {
@@ -235,7 +247,7 @@ $(document).ready(function () {
     $('.add-review-btn').on('click', function () {
         dNoneModal()
         $('.modal-content.main-modal').removeClass('__d-none-modal')
-        $('.modal-content.main-modal .modal-header').addClass('__d-none-modal')
+        // $('.modal-content.main-modal .modal-header').addClass('__d-none-modal')
         $('.add-review-modal-body').removeClass('__d-none-modal')
         $('#mainModal').modal('show')
     })
@@ -252,8 +264,8 @@ $(document).ready(function () {
 
     //
 
-    $('.mobile-dropdown-trigger').click(()=>{
-        if($('.mobile-sub-dropdown').hasClass('active')){
+    $('.mobile-dropdown-trigger').click(() => {
+        if ($('.mobile-sub-dropdown').hasClass('active')) {
             $('.mobile-sub-dropdown-trigger').removeClass('active')
             $('.mobile-sub-dropdown').removeClass('active')
         }
@@ -262,12 +274,31 @@ $(document).ready(function () {
         $('.mobile-dropdown').toggleClass('active')
     })
 
-    $('.mobile-sub-dropdown-trigger').click(()=>{
+    $('.mobile-sub-dropdown-trigger').click(() => {
         $('.mobile-sub-dropdown').toggleClass('active')
         $('.mobile-sub-dropdown-trigger').toggleClass('active')
     })
 
-    $('.mobile-calendar-triger-section').click(()=>{
+    $('.mobile-calendar-triger-section').click(() => {
         $('.calendar-slide').toggleClass('slide')
     })
+
+    function setPhotoDefault() {
+        let default_url = $($('.img-review-item')[0]).children().attr('src')
+        $('.current-review-photo').css({'background-image': `url('${default_url}')`})
+    }
+
+    setPhotoDefault()
+    $('.img-review-item').on('click', function () {
+        let current_url = $(this).children().attr('src')
+        $(this).parent().prev().css({'background-image': `url('${current_url}')`})
+    })
+
+    $('.old-fabrics-btn').click(() => {
+        let top = $('.about-page-mailing').offset().top * 0.5
+        $(window).scrollTop(top)
+        $('.form-custom-input.name').focus()
+    })
+
+
 })

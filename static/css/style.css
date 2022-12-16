@@ -28,6 +28,24 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more{
+    background-image: url("../images/icons/ic-share.png") !important;
+}
+
+.progress-bar-custom {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 4px;
+    width: 0%;
+    background: var(--yellow);
+    z-index: 9999;
+}
+
 body {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
@@ -35,7 +53,7 @@ body {
 
 header {
     background: var(--header-black);
-    padding: 10px 0px;
+    /*padding: 10px 0px;*/
 }
 
 .container {
@@ -69,9 +87,15 @@ header {
 }
 
 .header-container .header-logo {
-    height: 68px;
+    height: 78px;
     width: auto;
 }
+
+.landing-text .landing-tag,
+.shops .shop-item p {
+    cursor: default;
+}
+
 
 .header-container .header-logo img {
     height: 100%;
@@ -102,8 +126,15 @@ header {
 }
 
 .active-page,
-li.active-page a {
+li.active-page a,
+.active-page .submenu li:hover a,
+.active-page .submenu .sub-dropdown li:hover a {
     color: var(--yellow) !important;
+}
+
+.active-page .submenu li a,
+.active-page .submenu .sub-dropdown li a {
+    color: var(--menu-black) !important;
 }
 
 .name-review {
@@ -291,9 +322,13 @@ nav {
     z-index: 2;
 }
 
-.header-calendar .share-btn {
-    height: 20px;
-    width: 20px;
+.ya-share2__container_size_s .ya-share2__badge .ya-share2__icon{
+    height: 22px !important;
+    width: 22px !important;
+    background-size: 22px !important;
+}
+
+.ya-share2.ya-share2_inited {
     left: 10px;
     top: 10px;
     position: absolute;
@@ -318,6 +353,12 @@ nav {
     padding: 10px;
     max-width: 77px;
 }
+
+.all-sale .sale-item.selected {
+    box-shadow: 0px 0px 20px #E4CD00;
+
+}
+
 
 .all-sale .sale-item .sale-item-header {
     color: var(--white);
@@ -433,7 +474,39 @@ nav {
 
 
 .next-shops-calendar-arrow,
-.prev-shops-calendar-arrow {
+.prev-shops-calendar-arrow,
+.prev-sale-main-arrow,
+.next-sale-main-arrow,
+.big-calendar-main-arrow-next,
+.stock-arrow-prev,
+.stock-arrow-next,
+.big-calendar-main-arrow-prev,
+.main-calendar-main-arrow-prev,
+.main-calendar-main-arrow-next,
+.stock-page-arrow-next,
+.stock-page-arrow-prev{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.collapse-btn-blog {
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.mobile-calendar-section .next-sale-arrow, .mobile-calendar-section .prev-sale-arrow,
+.mobile-calendar-section .next-shops-calendar-arrow-content, .mobile-calendar-section .prev-shops-calendar-arrow-content {
+    width: 20px;
+}
+
+.toggle-tabs {
+    cursor: pointer;
+}
+
+.next-shops-calendar-arrow-content,
+.prev-shops-calendar-arrow-content {
     display: block;
     width: 55px;
     height: 1px;
@@ -441,7 +514,7 @@ nav {
     position: relative;
 }
 
-.next-shops-calendar-arrow:after {
+.next-shops-calendar-arrow-content:after {
     content: '';
     height: 1px;
     width: 7px;
@@ -452,7 +525,7 @@ nav {
     transform: rotate(35deg);
 }
 
-.next-shops-calendar-arrow:before {
+.next-shops-calendar-arrow-content:before {
     content: '';
     height: 1px;
     width: 7px;
@@ -463,7 +536,7 @@ nav {
     transform: rotate(-35deg);
 }
 
-.prev-shops-calendar-arrow:after {
+.prev-shops-calendar-arrow-content:after {
     content: '';
     height: 1px;
     width: 7px;
@@ -474,7 +547,7 @@ nav {
     transform: rotate(-35deg);
 }
 
-.prev-shops-calendar-arrow:before {
+.prev-shops-calendar-arrow-content:before {
     content: '';
     height: 1px;
     width: 7px;
@@ -498,7 +571,7 @@ nav {
 }
 
 .shops .shop-item p {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 0.8rem;
     line-height: 1rem;
     max-width: 199px;
@@ -911,10 +984,10 @@ nav {
     transition: all .3s ease-in-out;
 }
 
-.btn.about-btn:hover {
-    background: transparent;
-    color: var(--tab-black);
-}
+/*.btn.about-btn:hover {*/
+/*    background: transparent;*/
+/*    color: var(--tab-black);*/
+/*}*/
 
 .btn.about-btn:hover a {
     color: var(--tab-black);
@@ -932,20 +1005,20 @@ nav {
     background: var(--tab-black);
 }
 
-.mobile-filter-contact-section .search-contacts-city-section{
+.mobile-filter-contact-section .search-contacts-city-section {
     margin-bottom: 30px;
 }
 
-.our-collection-btn{
+.our-collection-btn {
     position: relative;
 }
 
-.our-collection-btn span{
+.our-collection-btn span {
     position: relative;
     z-index: 2;
 }
 
-.our-collection-btn:after{
+.our-collection-btn:after {
     content: '';
     width: 100%;
     height: 100%;
@@ -956,14 +1029,14 @@ nav {
     opacity: .6;
 }
 
-.arrows-about.filter-arrow{
+.arrows-about.filter-arrow {
     position: absolute;
     right: -20px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.mobile-city-filter{
+.mobile-city-filter {
     position: relative;
 }
 
@@ -1139,6 +1212,7 @@ nav {
 
 .all-news {
     display: grid;
+    gap: 30px;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -2219,6 +2293,8 @@ section.stocks {
 
 .our-collection-images {
     display: flex;
+    overflow: auto;
+    width: 100%;
     /*gap: 10px;*/
 }
 
@@ -2231,7 +2307,9 @@ section.stocks {
 
 .our-collection-images .img-block-collection {
     position: relative;
+    min-width: 65px;
     width: 65px;
+    padding: 0 2px;
     max-height: 450px;
     cursor: pointer;
     transition: all .3s ease-in-out;
@@ -2991,13 +3069,14 @@ section.reviews {
     justify-content: space-between;
 }
 
-#current-review-photo {
+.current-review-photo {
     width: 100%;
     height: 570px;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+
     /*убрать*/
-    background-image: url("../images/мег.jpg");
 }
 
 .more-review-photo {
@@ -3009,9 +3088,15 @@ section.reviews {
     overflow-x: scroll;
 }
 
-.more-review-photo img {
+.more-review-photo .img-review-item {
     width: 24%;
-    height: 24%;
+}
+
+.more-review-photo .img-review-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .reviews-item-content {
@@ -3286,6 +3371,15 @@ section.faq-section {
     position: absolute;
     top: 20px;
     right: 30px;
+    z-index: 2;
+}
+
+.form-custom-input{
+    transition: all .3s ease-in-out;
+}
+
+.form-custom-input:focus{
+    border: 1px solid var(--yellow);
 }
 
 .modal-dialog {
@@ -3466,9 +3560,9 @@ section.faq-section {
     padding: 70px 50px;
 }
 
-.modal-content.main-modal .modal-header {
-    margin-bottom: 60px;
-}
+/*.modal-content.main-modal .modal-header {*/
+/*    margin-bottom: 60px;*/
+/*}*/
 
 .modal-content.main-modal .modal-header .modal-title {
     color: var(--tab-black);

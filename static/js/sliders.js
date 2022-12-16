@@ -1,19 +1,19 @@
 new Swiper('.swiper-sale-calendar', {
     navigation: {
-        prevEl: '.prev-sale-arrow',
-        nextEl: '.next-sale-arrow',
+        prevEl: '.prev-sale-main-arrow',
+        nextEl: '.next-sale-main-arrow',
     },
 })
 new Swiper('.swiper-sale-big-calendar', {
     navigation: {
-        prevEl: '.slider-arrows-prev.big',
-        nextEl: '.slider-arrows-next.big',
+        prevEl: '.big-calendar-main-arrow-prev',
+        nextEl: '.big-calendar-main-arrow-next',
     },
 })
 new Swiper('.stock-page-swiper', {
     navigation: {
-        prevEl: '.slider-arrows-prev.stocks',
-        nextEl: '.slider-arrows-next.stocks',
+        prevEl: '.stock-page-arrow-prev',
+        nextEl: '.stock-page-arrow-next',
     },
 })
 new Swiper('.shops-swiper', {
@@ -201,4 +201,6 @@ new Swiper('.swiper-city-filter', {
         }
     }
 })
+
+
 
