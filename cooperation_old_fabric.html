@@ -128,16 +128,17 @@
                 </div>
 
             </div>
-            <div class="about-page-mailing-container-form">
+            <div class="about-page-mailing-container-form modal-form">
+                <input type="hidden" name="old-fabric">
                 <div class="custom-input-block">
                     <label for="name">Имя</label>
-                    <input type="text" id="name" class="form-custom-input name" placeholder="Введите Ваше Имя">
+                    <input type="text" id="name" class="form-custom-input required name" placeholder="Введите Ваше Имя">
                 </div>
                 <div class="custom-input-block">
                     <label for="email">Телефон</label>
-                    <input type="text" id="email" class="form-custom-input phone" placeholder="8916-xxx-xx-x6">
+                    <input type="text" id="email" class="form-custom-input required phone" placeholder="8916-xxx-xx-x6">
                 </div>
-                <button type="submit" class="btn subscribe-btn">Оставить заявку</button>
+                <button type="submit" class="btn subscribe-btn validation-btn">Оставить заявку</button>
             </div>
         </div>
     </section>
@@ -218,5 +219,6 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="static/bootsrap/js/bootstrap.bundle.min.js"></script>
 <script src="static/js/index.js"></script>
+<script src="static/js/validation.js"></script>
 </body>
 </html>

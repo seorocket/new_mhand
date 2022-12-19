@@ -29,10 +29,10 @@ p {
 }
 
 html {
-   scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more{
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more {
     background-image: url("../images/icons/ic-share.png") !important;
 }
 
@@ -322,7 +322,7 @@ nav {
     z-index: 2;
 }
 
-.ya-share2__container_size_s .ya-share2__badge .ya-share2__icon{
+.ya-share2__container_size_s .ya-share2__badge .ya-share2__icon {
     height: 22px !important;
     width: 22px !important;
     background-size: 22px !important;
@@ -472,6 +472,20 @@ nav {
     transform: rotate(35deg);
 }
 
+.btn:disabled {
+    transition: all .3s ease-in-out;
+    border: 2px solid var(--yellow);
+    color: var(--yellow) !important;
+    background: transparent !important;
+    cursor: default;
+}
+
+.error-input{
+    transition: all .2s ease-in-out;
+    outline: 1px solid red !important;
+    border-radius: 0 !important;
+}
+
 
 .next-shops-calendar-arrow,
 .prev-shops-calendar-arrow,
@@ -484,7 +498,9 @@ nav {
 .main-calendar-main-arrow-prev,
 .main-calendar-main-arrow-next,
 .stock-page-arrow-next,
-.stock-page-arrow-prev{
+.stock-page-arrow-prev,
+.next-sale-main-arrow_mobile,
+.prev-sale-main-arrow_mobile{
     height: 30px;
     display: flex;
     align-items: center;
@@ -499,6 +515,12 @@ nav {
 .mobile-calendar-section .next-sale-arrow, .mobile-calendar-section .prev-sale-arrow,
 .mobile-calendar-section .next-shops-calendar-arrow-content, .mobile-calendar-section .prev-shops-calendar-arrow-content {
     width: 20px;
+}
+
+.header-calendar img{
+    height: 20px;
+    position: absolute;
+    left: 20px;
 }
 
 .toggle-tabs {
@@ -989,15 +1011,15 @@ nav {
 /*    color: var(--tab-black);*/
 /*}*/
 
-.btn.about-btn:hover a {
-    color: var(--tab-black);
-}
+/*.btn.about-btn:hover a {*/
+/*    color: var(--tab-black);*/
+/*}*/
 
-.btn.about-btn:hover .arrows-about,
-.btn.about-btn:hover .arrows-about:before,
-.btn.about-btn:hover .arrows-about:after {
-    background: var(--tab-black);
-}
+/*.btn.about-btn:hover .arrows-about,*/
+/*.btn.about-btn:hover .arrows-about:before,*/
+/*.btn.about-btn:hover .arrows-about:after {*/
+/*    background: var(--tab-black);*/
+/*}*/
 
 .arrows-about.filter-arrow,
 .arrows-about.filter-arrow:after,
@@ -3374,11 +3396,11 @@ section.faq-section {
     z-index: 2;
 }
 
-.form-custom-input{
+.form-custom-input {
     transition: all .3s ease-in-out;
 }
 
-.form-custom-input:focus{
+.form-custom-input:focus {
     border: 1px solid var(--yellow);
 }
 

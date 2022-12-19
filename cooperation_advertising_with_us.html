@@ -129,22 +129,20 @@
         <div class="container about-page-mailing-container">
             <div class="about-page-mailing-container-content">
                 <div class="title white">
-                    Подписаться на рассылку
-                </div>
-                <div class="about-page-mailing-container-content-body">
-                    Получайте первыми выгодные предложения и скидки
+                    ОСТАВИТЬ ЗАЯВКУ ДЛЯ <br>РАЗМЕЩЕНИЯ РЕКЛАМЫ
                 </div>
             </div>
-            <div class="about-page-mailing-container-form">
+            <div class="about-page-mailing-container-form modal-form">
+                <input type="hidden" name="cooperation-advertising">
                 <div class="custom-input-block">
                     <label for="name">Имя</label>
-                    <input type="text" id="name" class="form-custom-input name" placeholder="Введите Ваше Имя">
+                    <input type="text" id="name" class="form-custom-input required name" placeholder="Введите Ваше Имя">
                 </div>
                 <div class="custom-input-block">
                     <label for="email">E-mail</label>
-                    <input type="text" id="email" class="form-custom-input email" placeholder="megahand@yandex.ru">
+                    <input type="text" id="email" class="form-custom-input required email" placeholder="megahand@yandex.ru">
                 </div>
-                <button type="submit" class="btn subscribe-btn">подписаться</button>
+                <button type="submit" class="btn subscribe-btn validation-btn">оставить заявку</button>
             </div>
         </div>
     </section>
@@ -264,5 +262,6 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="static/bootsrap/js/bootstrap.bundle.min.js"></script>
 <script src="static/js/index.js"></script>
+<script src="static/js/validation.js"></script>
 </body>
 </html>

@@ -16,6 +16,41 @@
 //     })
 // })
 
+// mask for phone input
+window.addEventListener("DOMContentLoaded", function() {
+    [].forEach.call( document.querySelectorAll('.phone'), function(input) {
+        var keyCode;
+        function mask(event) {
+            event.keyCode && (keyCode = event.keyCode);
+            var pos = this.selectionStart;
+            if (pos < 3) event.preventDefault();
+            var matrix = "+7 (___) ___ ____",
+                i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, ""),
+                new_value = matrix.replace(/[_\d]/g, function(a) {
+                    return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+                });
+            i = new_value.indexOf("_");
+            if (i != -1) {
+                i < 5 && (i = 3);
+                new_value = new_value.slice(0, i)
+            }
+            var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                function(a) {
+                    return "\\d{1," + a.length + "}"
+                }).replace(/[+()]/g, "\\$&");
+            reg = new RegExp("^" + reg + "$");
+            if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+            if (event.type == "blur" && this.value.length < 5)  this.value = ""
+        }
+        input.addEventListener("input", mask, false);
+        input.addEventListener("focus", mask, false);
+        input.addEventListener("blur", mask, true);
+        input.addEventListener("keydown", mask, false)
+    });
+});
+
 function progressBar() {
     // Узнаем на сколько страница прокручена
     let scroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -220,13 +255,6 @@ $(document).ready(function () {
         $('#mainModal').modal('show')
     })
 
-    $('.get-coupon-btn').click(function () {
-        $('#mainModal').modal('hide')
-        $('.modal-content.main-modal').removeClass('__d-none-modal')
-        $('.coupon-success-modal').removeClass('__d-none-modal')
-        $('#successModal').modal('show')
-    })
-
     $('.job-openings-modal-btn').on('click', function () {
         let elements_modal = {
             title: $('#mainModalLabel')
@@ -238,24 +266,12 @@ $(document).ready(function () {
         $('#mainModal').modal('show')
     })
 
-    $('.send-job-btn').click(function () {
-        $('#mainModal').modal('hide')
-        $('.job-opening-success-modal').removeClass('__d-none-modal')
-        $('#successModal').modal('show')
-    })
-
     $('.add-review-btn').on('click', function () {
         dNoneModal()
         $('.modal-content.main-modal').removeClass('__d-none-modal')
         // $('.modal-content.main-modal .modal-header').addClass('__d-none-modal')
         $('.add-review-modal-body').removeClass('__d-none-modal')
         $('#mainModal').modal('show')
-    })
-
-    $('.add-review-modal-btn').on('click', function () {
-        $('#mainModal').modal('hide')
-        $('.review-success-modal').removeClass('__d-none-modal')
-        $('#successModal').modal('show')
     })
 
     $('.modal-calendar').on('click', function () {

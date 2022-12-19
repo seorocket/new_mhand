@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="static/wowjs/css/libs/animate.css">
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f69140e6-4f5f-4563-a7b4-d26cfe204ef4&lang=ru_RU"
+            type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -91,8 +93,9 @@
                                 покупку с выгодой!
                             </div>
                         </div>
-                        <div class="coupon-form">
+                        <div class="coupon-form modal-form">
                             <div class="coupon-inputs">
+                                <input type="hidden" name="coupon-300">
                                 <input type="text" class="coupon-input name required" name="name"
                                        placeholder="Алёна">
                                 <input type="phone" class="coupon-input phone required" name="phone"
@@ -100,11 +103,11 @@
                                 <select class="coupon-input required select-city-coupon" name="city"
                                         placeholder="Выбрать город">
                                     <option></option>
-                                    <option value="367">Абаза</option>
-                                    <option value="340">Абакан</option>
-                                    <option value="369">Абдулино</option>
-                                    <option value="370">Абинск</option>
-                                    <option value="371">Агидель</option>
+                                    <option value="Абаза">Абаза</option>
+                                    <option value="Абакан">Абакан</option>
+                                    <option value="Абдулино">Абдулино</option>
+                                    <option value="Абинск">Абинск</option>
+                                    <option value="Агидель">Агидель</option>
                                 </select>
                             </div>
                             <div class="agreement-coupon-section">
@@ -117,7 +120,7 @@
                                 </div>
                                 <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
                             </div>
-                            <div class="get-coupon-btn btn">получить</div>
+                            <button class="get-coupon-btn btn validation-btn" data-btn="coupon-300">получить</button>
                         </div>
                     </div>
                     <div class="tabs__content">
@@ -130,8 +133,9 @@
                                 покупку с выгодой!
                             </div>
                         </div>
-                        <div class="coupon-form">
+                        <div class="coupon-form modal-form">
                             <div class="coupon-inputs">
+                                <input type="hidden" name="coupon-500">
                                 <input type="text" class="coupon-input name required" name="name"
                                        placeholder="Ваше имя">
                                 <input type="phone" class="coupon-input phone required" name="phone"
@@ -145,9 +149,10 @@
                                     <option value="370">Абинск</option>
                                     <option value="371">Агидель</option>
                                 </select>
-                                <input type="phone" class="coupon-input phone required" name="phone"
+                                <input type="phone" class="coupon-input phone phone-friend-1 required" name="phone"
                                        placeholder="Телефон друга">
-                                <select class="coupon-input required select-city-coupon" name="city"
+                                <select class="coupon-input required select-city-coupon select-city-coupon-friend-1"
+                                        name="city"
                                         placeholder="Город друга">
                                     <option></option>
                                     <option value="367">Абаза</option>
@@ -156,9 +161,10 @@
                                     <option value="370">Абинск</option>
                                     <option value="371">Агидель</option>
                                 </select>
-                                <input type="phone" class="coupon-input phone required" name="phone"
+                                <input type="phone" class="coupon-input phone phone-friend-2 required" name="phone"
                                        placeholder="Телефон друга">
-                                <select class="coupon-input required select-city-coupon" name="city"
+                                <select class="coupon-input required select-city-coupon select-city-coupon-friend-2"
+                                        name="city"
                                         placeholder="Город друга">
                                     <option></option>
                                     <option value="367">Абаза</option>
@@ -171,7 +177,7 @@
                             <div class="agreement-coupon-section">
 
                                 <div class="agreement-custom-input">
-                                    <input type="checkbox" name="agreement" class="agreement required"
+                                    <input checked type="checkbox" name="agreement" class="agreement required"
                                            id="agreement-coupon">
                                     <label for="agreement-coupon">Я ознакомлен(а) с условиями <a
                                             href="agreement.html">публичной оферты и условиями проведения
@@ -179,7 +185,7 @@
                                 </div>
                                 <span>Нажимая кнопку “получить” вы даете согласие на обработку персональных данных</span>
                             </div>
-                            <div class="get-coupon-btn btn">получить</div>
+                            <button class="get-coupon-btn btn validation-btn" data-btn="coupon-500">получить</button>
                         </div>
                     </div>
                 </div>
@@ -191,17 +197,19 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <div class="job-opening-modal-body">
+                <div class="job-opening-modal-body modal-form">
                     <div class="job-opening-left">
+                        <input type="hidden" name="job-openings">
                         <input type="text" name="name" placeholder="Фамилия Имя Отчество"
                                class="name required modal-input">
-                        <input type="text" id="datepicker" class="modal-input" placeholder="Дата рождения">
+                        <input type="text" id="datepicker" class="modal-input required birthday"
+                               placeholder="Дата рождения">
                         <div class="job-opening-selected">
                             <span>Ваше гражданство</span>
-                            <div class="job-opening-selected-inputs">
+                            <div class="job-opening-selected-inputs citizenship">
                                 <div class="job-opening-selected-inputs-checkbox">
-                                    <input type="checkbox" id="citizenship"
-                                           class="job-opening-checkbox citizenship-checkbox">
+                                    <input checked type="checkbox" value="РФ" id="citizenship"
+                                           class="job-opening-checkbox citizenship-checkbox focused">
                                     <label for="citizenship">РФ</label>
                                 </div>
                                 <input type="text" name="citizenship" class="citizenship-input modal-input"
@@ -211,10 +219,10 @@
                         <div class="job-opening-selected">
                             <span>Были ли у Вас административные, уголовные, гражданские
 иски, судимости? Если да, по каким статьям?</span>
-                            <div class="job-opening-selected-inputs">
+                            <div class="job-opening-selected-inputs criminal">
                                 <div class="job-opening-selected-inputs-checkbox">
-                                    <input type="checkbox" id="criminal"
-                                           class="job-opening-checkbox criminal-checkbox">
+                                    <input value="Нет" checked type="checkbox" id="criminal"
+                                           class="job-opening-checkbox criminal-checkbox focused">
                                     <label for="criminal">Нет</label>
                                 </div>
                                 <input type="text" name="criminal" class="criminal-input modal-input"
@@ -223,11 +231,11 @@
                         </div>
                         <div class="job-opening-selected">
                             <span>Есть ли у Вас физические ограничения\инвалидность?</span>
-                            <div class="job-opening-selected-inputs">
+                            <div class="job-opening-selected-inputs health_restrictions">
                                 <div class="job-opening-selected-inputs-checkbox">
-                                    <input type="checkbox" id="disability"
-                                           class="job-opening-checkbox disability-checkbox">
-                                    <label for="disability">Нет</label>
+                                    <input checked type="checkbox" value="Нет" id="health_restrictions"
+                                           class="job-opening-checkbox disability-checkbox focused">
+                                    <label for="health_restrictions">Нет</label>
                                 </div>
                                 <input type="text" name="disability" class="disability-input modal-input"
                                        placeholder="Другое">
@@ -235,15 +243,15 @@
                         </div>
                         <div class="job-opening-selected">
                             <span>Есть ли у Вас опыт работы на кассе?</span>
-                            <div class="job-opening-selected-inputs">
+                            <div class="job-opening-selected-inputs box_office">
                                 <div class="job-opening-selected-inputs-checkbox">
-                                    <input type="radio" name="box-office" id="box-office-yes"
-                                           class="job-opening-checkbox disability-checkbox">
+                                    <input checked type="radio" name="box-office" id="box-office-yes"
+                                           class="job-opening-checkbox disability-checkbox focused" value="Да">
                                     <label for="box-office-yes">Да</label>
                                 </div>
                                 <div class="job-opening-selected-inputs-checkbox">
                                     <input type="radio" name="box-office" id="box-office-no"
-                                           class="job-opening-checkbox box-office-checkbox">
+                                           class="job-opening-checkbox box-office-checkbox" value="Нет">
                                     <label for="box-office-no">Нет</label>
                                 </div>
                             </div>
@@ -259,7 +267,7 @@
                     <div class="job-opening-footer">
                         <div class="job-opening-footer-left">
                             <span>Нажимая кнопку “отправить” вы даете согласие на обработку персональных данных</span>
-                            <div class="btn about-btn send-job-btn"><a>ОТПРАВИТЬ АНКЕТУ<span
+                            <div class="btn about-btn send-job-btn validation-btn"><a>ОТПРАВИТЬ АНКЕТУ<span
                                     class="arrows-about"></span></a>
                             </div>
                         </div>
@@ -346,7 +354,6 @@
                         <div class="add-review-modal-right-footer">Необязательно*</div>
                     </div>
                 </div>
-                .
             </div>
         </div>
     </div>
@@ -811,7 +818,9 @@
                     <div class="small-calendar calendar">
                         <div class="header-calendar">
                             <script src="https://yastatic.net/share2/share.js"></script>
-                            <div class="ya-share2" data-curtain data-size="s" data-copy="last" data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
+                            <div class="ya-share2" data-curtain data-size="s" data-copy="last" data-shape="round"
+                                 data-limit="0" data-more-button-type="short"
+                                 data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
 
                             <p>календарь скидок</p>
                         </div>
@@ -819,37 +828,59 @@
                             <div class="all-sale">
                                 <div class="sale-item selected">
                                     <div class="sale-item-header">
-                                        <p>3</p>
-                                        <p>вт</p>
+                                        <p class="date_card">1</p>
+                                        <p class="week_card">Вс</p>
                                     </div>
-                                    <div class="count-sale">70%</div>
+                                    <div class="count-sale count_sale_card">70%</div>
                                 </div>
                                 <div class="sale-item">
                                     <div class="sale-item-header">
-                                        <p>4</p>
-                                        <p>ср</p>
+                                        <p class="date_card">2</p>
+                                        <p class="week_card">Пн</p>
                                     </div>
-                                    <div class="count-sale">70%</div>
+                                    <div class="count-sale count_sale_card">70%</div>
                                 </div>
                                 <div class="sale-item">
                                     <div class="sale-item-header">
-                                        <p>5</p>
-                                        <p>чт</p>
+                                        <p class="date_card">3</p>
+                                        <p class="week_card">Вт</p>
                                     </div>
-                                    <div class="count-sale">70%</div>
+                                    <div class="count-sale count_sale_card">70%</div>
                                 </div>
                                 <div class="sale-item">
                                     <div class="sale-item-header">
-                                        <p>6</p>
-                                        <p>пт</p>
+                                        <p class="date_card">4</p>
+                                        <p class="week_card">Ср</p>
                                     </div>
-                                    <div class="count-sale">70%</div>
+                                    <div class="count-sale count_sale_card">70%</div>
                                 </div>
                             </div>
-                            <div class="current-sale-item swiper-sale-calendar swiper">
+                            <div class="current-sale-item swiper-sale-calendar desktop swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide swiper-sale-item">
-                                        <p class="week-day">понедельник</p>
+                                        <p class="week-day">Воскресенье</p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            1 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
+                                        <p class="sale">40%</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">Воскресенье</p>
+                                        <div class="date">
+                                            <div class="prev-sale-main-arrow"><span
+                                                    class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                            2 января
+                                            <div class="next-sale-main-arrow"><span
+                                                    class="next-sale-arrow slider-arrows-next"></span></div>
+                                        </div>
+                                        <p class="sale">40%</p>
+                                    </div>
+                                    <div class="swiper-slide swiper-sale-item">
+                                        <p class="week-day">Воскресенье</p>
                                         <div class="date">
                                             <div class="prev-sale-main-arrow"><span
                                                     class="prev-sale-arrow slider-arrows-prev"></span></div>
@@ -857,10 +888,10 @@
                                             <div class="next-sale-main-arrow"><span
                                                     class="next-sale-arrow slider-arrows-next"></span></div>
                                         </div>
-                                        <p class="sale">70%</p>
+                                        <p class="sale">40%</p>
                                     </div>
                                     <div class="swiper-slide swiper-sale-item">
-                                        <p class="week-day">понедельник</p>
+                                        <p class="week-day">Воскресенье</p>
                                         <div class="date">
                                             <div class="prev-sale-main-arrow"><span
                                                     class="prev-sale-arrow slider-arrows-prev"></span></div>
@@ -868,10 +899,10 @@
                                             <div class="next-sale-main-arrow"><span
                                                     class="next-sale-arrow slider-arrows-next"></span></div>
                                         </div>
-                                        <p class="sale">70%</p>
+                                        <p class="sale">40%</p>
                                     </div>
                                     <div class="swiper-slide swiper-sale-item">
-                                        <p class="week-day">понедельник</p>
+                                        <p class="week-day">Воскресенье</p>
                                         <div class="date">
                                             <div class="prev-sale-main-arrow"><span
                                                     class="prev-sale-arrow slider-arrows-prev"></span></div>
@@ -879,10 +910,10 @@
                                             <div class="next-sale-main-arrow"><span
                                                     class="next-sale-arrow slider-arrows-next"></span></div>
                                         </div>
-                                        <p class="sale">70%</p>
+                                        <p class="sale">40%</p>
                                     </div>
                                     <div class="swiper-slide swiper-sale-item">
-                                        <p class="week-day">понедельник</p>
+                                        <p class="week-day">Воскресенье</p>
                                         <div class="date">
                                             <div class="prev-sale-main-arrow"><span
                                                     class="prev-sale-arrow slider-arrows-prev"></span></div>
@@ -890,10 +921,10 @@
                                             <div class="next-sale-main-arrow"><span
                                                     class="next-sale-arrow slider-arrows-next"></span></div>
                                         </div>
-                                        <p class="sale">70%</p>
+                                        <p class="sale">40%</p>
                                     </div>
                                     <div class="swiper-slide swiper-sale-item">
-                                        <p class="week-day">понедельник</p>
+                                        <p class="week-day">Воскресенье</p>
                                         <div class="date">
                                             <div class="prev-sale-main-arrow"><span
                                                     class="prev-sale-arrow slider-arrows-prev"></span></div>
@@ -901,10 +932,10 @@
                                             <div class="next-sale-main-arrow"><span
                                                     class="next-sale-arrow slider-arrows-next"></span></div>
                                         </div>
-                                        <p class="sale">70%</p>
+                                        <p class="sale">40%</p>
                                     </div>
                                     <div class="swiper-slide swiper-sale-item">
-                                        <p class="week-day">понедельник</p>
+                                        <p class="week-day">Воскресенье</p>
                                         <div class="date">
                                             <div class="prev-sale-main-arrow"><span
                                                     class="prev-sale-arrow slider-arrows-prev"></span></div>
@@ -912,7 +943,7 @@
                                             <div class="next-sale-main-arrow"><span
                                                     class="next-sale-arrow slider-arrows-next"></span></div>
                                         </div>
-                                        <p class="sale">70%</p>
+                                        <p class="sale">40%</p>
                                     </div>
                                 </div>
                             </div>
@@ -946,7 +977,9 @@
                     <div class="big-calendar calendar">
                         <div class="header-calendar">
                             <script src="https://yastatic.net/share2/share.js"></script>
-                            <div class="ya-share2" data-curtain data-size="s" data-copy="last" data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
+                            <div class="ya-share2" data-curtain data-size="s" data-copy="last" data-shape="round"
+                                 data-limit="0" data-more-button-type="short"
+                                 data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
 
                             <p>календарь скидок</p>
                             <div class="close-icon close-calendar"><i class="fa-solid fa-xmark"></i></div>
@@ -1345,54 +1378,124 @@
                                 <div class="small-calendar calendar">
                                     <div class="body-calendar small">
                                         <div class="all-sale">
-                                            <div class="sale-item selected">
+                                            <div class="sale-item mobile selected">
                                                 <div class="sale-item-header">
-                                                    <p>3</p>
-                                                    <p>вт</p>
+                                                    <p class="date_card">3</p>
+                                                    <p class="week_card">вт</p>
                                                 </div>
-                                                <div class="count-sale">70%</div>
+                                                <div class="count-sale count_sale_card">70%</div>
                                             </div>
-                                            <div class="sale-item">
+                                            <div class="sale-item mobile">
                                                 <div class="sale-item-header">
-                                                    <p>4</p>
-                                                    <p>ср</p>
+                                                    <p class="date_card">3</p>
+                                                    <p class="week_card">вт</p>
                                                 </div>
-                                                <div class="count-sale">70%</div>
+                                                <div class="count-sale count_sale_card">70%</div>
                                             </div>
-                                            <div class="sale-item">
+                                            <div class="sale-item mobile">
                                                 <div class="sale-item-header">
-                                                    <p>5</p>
-                                                    <p>чт</p>
+                                                    <p class="date_card">3</p>
+                                                    <p class="week_card">вт</p>
                                                 </div>
-                                                <div class="count-sale">70%</div>
+                                                <div class="count-sale count_sale_card">70%</div>
                                             </div>
-                                            <div class="sale-item">
+                                            <div class="sale-item mobile">
                                                 <div class="sale-item-header">
-                                                    <p>6</p>
-                                                    <p>пт</p>
+                                                    <p class="date_card">3</p>
+                                                    <p class="week_card">вт</p>
                                                 </div>
-                                                <div class="count-sale">70%</div>
+                                                <div class="count-sale count_sale_card">70%</div>
                                             </div>
                                         </div>
-                                        <div class="current-sale-item swiper-sale-calendar swiper">
+                                        <div class="current-sale-item swiper-sale-calendar-mobile swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide swiper-sale-item">
-                                                    <p class="week-day">понедельник</p>
+                                                    <p class="week-day">Воскресенье</p>
                                                     <div class="date">
-                                                        <div class="prev-sale-main-arrow"><span class="prev-sale-arrow slider-arrows-prev"></span></div>
-                                                        3 января
-                                                        <div class="next-sale-main-arrow"><span class="next-sale-arrow slider-arrows-next"></span></div>
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        1 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
                                                     </div>
-                                                    <p class="sale">70%</p>
+                                                    <p class="sale">40%</p>
                                                 </div>
                                                 <div class="swiper-slide swiper-sale-item">
                                                     <p class="week-day">понедельник</p>
                                                     <div class="date">
-                                                        <div class="prev-sale-main-arrow"><span class="prev-sale-arrow slider-arrows-prev"></span></div>
-                                                        4 января
-                                                        <div class="next-sale-main-arrow"><span class="next-sale-arrow slider-arrows-next"></span></div>
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        2 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
                                                     </div>
-                                                    <p class="sale">70%</p>
+                                                    <p class="sale">40%</p>
+                                                </div>
+                                                <div class="swiper-slide swiper-sale-item">
+                                                    <p class="week-day">вторник</p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        3 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
+                                                    <p class="sale">40%</p>
+                                                </div>
+                                                <div class="swiper-slide swiper-sale-item">
+                                                    <p class="week-day">среда</p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        4 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
+                                                    <p class="sale">40%</p>
+                                                </div>
+                                                <div class="swiper-slide swiper-sale-item">
+                                                    <p class="week-day">четверг</p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        5 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
+                                                    <p class="sale">40%</p>
+                                                </div>
+                                                <div class="swiper-slide swiper-sale-item">
+                                                    <p class="week-day">пятница</p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        6 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
+                                                    <p class="sale">40%</p>
+                                                </div>
+                                                <div class="swiper-slide swiper-sale-item">
+                                                    <p class="week-day">суббота</p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        7 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
+                                                    <p class="sale">40%</p>
+                                                </div>
+                                                <div class="swiper-slide swiper-sale-item">
+                                                    <p class="week-day">воскресенье</p>
+                                                    <div class="date">
+                                                        <div class="prev-sale-main-arrow_mobile"><span
+                                                                class="prev-sale-arrow slider-arrows-prev"></span></div>
+                                                        8 января
+                                                        <div class="next-sale-main-arrow_mobile"><span
+                                                                class="next-sale-arrow slider-arrows-next"></span></div>
+                                                    </div>
+                                                    <p class="sale">40%</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1437,12 +1540,12 @@
             </div>
         </div>
     </section>
-    <section >
+    <section>
         <div class="container coupon-btn-section">
             <div class="coupon-btn btn _coupon-500"><p>получить купон на 500р</p></div>
         </div>
     </section>
-    <section class="wow fadeInUpBig" data-wow-duration="1s">
+    <section class="" data-wow-duration="1s">
         <div class="container category">
             <div class="block-category">
                 <p>для неё</p>
@@ -1464,7 +1567,7 @@
             </div>
         </div>
     </section>
-    <section class="wow fadeInUpBig" data-wow-duration="1s">
+    <section class="" data-wow-duration="1s">
         <div class="stock-container container">
             <div class="title-block">
                 <p>скидки на одежду</p>
@@ -1739,14 +1842,14 @@
             </div>
         </div>
     </section>
-    <section class="wow fadeInUpBig" data-wow-duration="1s">
+    <section class="" data-wow-duration="1s">
         <iframe class="video-iframe" height="750px" src="https://www.youtube.com/embed/LZawF9zpoNc"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
     </section>
-    <section class="wow fadeInUpBig" data-wow-duration="1s">
+    <section class="" data-wow-duration="1s">
         <div class="container container-about">
             <div class="title-block">
                 <p>о нас</p>
@@ -1772,7 +1875,7 @@
             </div>
         </div>
     </section>
-    <section class="brand-section wow fadeInUpBig" data-wow-duration="1s">
+    <section class="brand-section " data-wow-duration="1s">
         <div class="container brand-container">
             <div class="title-block">
                 <p>бренды</p>
@@ -1820,7 +1923,7 @@
             </div>
         </div>
     </section>
-    <section class="wow fadeInUpBig" data-wow-duration="1s">
+    <section class="" data-wow-duration="1s">
         <div class="container blog-container">
             <div class="title-block">
                 <p>наш блог</p>
@@ -1945,7 +2048,7 @@
             </div>
         </div>
     </section>
-    <section class="news-section wow fadeInUpBig" data-wow-duration="1s">
+    <section class="news-section " data-wow-duration="1s">
         <div class="container news-container">
             <div class="title-block">
                 <p>новости</p>
@@ -2051,8 +2154,28 @@
         </div>
     </section>
     <section class="map">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f2fb0bb059825d228cc66ce2e5b7b9ace9725272786db770aca3ed15da85349&amp;source=constructor"
-                width="100%" height="700px" frameborder="0"></iframe>
+        <div id="map" style="width: 100%; height: 600px"></div>
+        <script>
+            ymaps.ready(init);
+
+            function init() {
+                // Создание карты.
+                var myMap = new ymaps.Map("map", {
+                    center: [55.76, 37.64],
+                    zoom: 7,
+                    iconImageHref: 'static/images/icons/mh.png'
+                });
+                let placemark = new ymaps.Placemark([55.76, 37.64], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: 'static/images/icons/mh.png',
+                    iconImageSize: [60, 100],
+                    iconImageOffset: [-60, -100],
+
+                })
+
+                myMap.geoObjects.add(placemark)
+            }
+        </script>
         <div class="shops-data">
             <div class="shops-data-title">
                 наши магазины
@@ -2139,7 +2262,7 @@
 <script src="static/wowjs/dist/wow.min.js"></script>
 <script>
     wow = new WOW({
-        mobile:false
+        mobile: false
     })
     wow.init();
 </script>
@@ -2158,6 +2281,7 @@
 </script>
 <script src="static/js/sliders.js"></script>
 <script src="static/js/index.js"></script>
+<script src="static/js/validation.js"></script>
 
 </body>
 </html>
