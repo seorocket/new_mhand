@@ -8,6 +8,7 @@
     />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="static/wowjs/css/libs/animate.css">
+    <link rel="icon" type="image/png" sizes="128x128" href="static/images/icons/favicon.png">
     <script src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f69140e6-4f5f-4563-a7b4-d26cfe204ef4&lang=ru_RU"
             type="text/javascript"></script>
@@ -20,7 +21,7 @@
 <body>
 <header>
     <div class="container header-container">
-        <div class="location location-modal"><img src="static/images/icons/icons8-location-96.png"> Москва</div>
+        <div class="location location-modal" id="select-city-header"><img src="static/images/icons/icons8-location-96.png"> Мегахенд</div>
         <div class="header-logo"><a href="index.html"><img src="static/images/logo.png" alt="logo"></a></div>
         <div class="top-header-right">
             <div class="phone-section"><img src="static/images/icons/" alt=""><i class="fa-solid fa-phone"></i> <a
@@ -47,22 +48,23 @@
                                 <span class="mobile-sub-dropdown-trigger">Сотрудничество <i
                                         class="fa-solid fa-chevron-down"></i></span>
                                 <ul class="mobile-sub-dropdown">
-                                    <li><a href="">Арендодателям</a></li>
-                                    <li><a href="">Оптовикам (ветошь)</a></li>
-                                    <li><a href="">Реклама у нас</a></li>
+                                    <li><a href="cooperation.html">Арендодателям</a></li>
+                                    <li><a href="cooperation_old_fabric.html">Оптовикам (ветошь)</a></li>
+                                    <li><a href="cooperation_advertising_with_us.html">Реклама у нас</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Новости</a></li>
-                            <li><a href="">Отзывы</a></li>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="">Блог</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li><a href="reviews.html">Отзывы</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="blog.html">Блог</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Акции</a></li>
-                    <li><a href="">Наши коллекции</a></li>
-                    <li><a href="">Бренды</a></li>
-                    <li><a href="">Контакты</a></li>
-                    <li><a href="">Вакансии</a></li>
+                    <li><a href="stocks.html">Акции</a></li>
+                    <li><a href="our_collection.html">Наши коллекции</a></li>
+                    <li><a href="brands.html">Бренды</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="job_openings.html">Вакансии</a></li>
                 </ul>
             </nav>
         </div>
@@ -393,7 +395,10 @@
         <div class="modal-content main-modal">
             <div class="big-calendar active calendar">
                 <div class="header-calendar">
-                    <img src="static/images/icons/ic-share.png" class="share-btn">
+                    <script src="https://yastatic.net/share2/share.js"></script>
+                    <div class="ya-share2" data-curtain data-size="s" data-copy="last" data-shape="round"
+                         data-limit="0" data-more-button-type="short"
+                         data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
                     <p>календарь скидок</p>
                     <div class="close-icon" data-bs-dismiss="modal" aria-label="Закрыть"><i
                             class="fa-solid fa-xmark"></i></div>
@@ -771,6 +776,43 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="select-city" aria-labelledby="cityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content main-modal">
+            <div class="big-calendar active calendar">
+                <div class="header-calendar">
+                    <p>Введите название города или выберите из списка</p>
+                    <div class="close-icon" data-bs-dismiss="modal" aria-label="Закрыть"><i
+                            class="fa-solid fa-xmark"></i></div>
+                </div>
+                <div class="body-select-city">
+                    <div class="search-container city">
+                        <input type="text" class="search-input" placeholder="Название города">
+                    </div>
+                    <ul class="select-city-content">
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="самара"><a href="#">Самара</a></li>
+                        <li class="select-city-content-item" data-search="Москва"><a href="#">Москва</a></li>
+
+                    </ul>
                 </div>
             </div>
 
@@ -1365,8 +1407,11 @@
                 <div class="mobile-calendar-section">
                     <div class="mobile-calendar-trigger">
                         <div class="mobile-calendar-triger-section">
-                            <p>календарь скидок</p>
-                            <img src="static/images/icons/ic-share.png" alt="" class="mobile-calendar-share">
+                            <p class="trigger-section-calendar">календарь скидок</p>
+                            <script src="https://yastatic.net/share2/share.js"></script>
+                            <div class="ya-share2" data-size="s" data-copy="last" data-shape="round"
+                                 data-limit="0" data-more-button-type="short"
+                                 data-services="vkontakte,odnoklassniki,telegram,whatsapp"></div>
                             <div class="triangle-section">
                                 <div class="triangle"></div>
                                 <div class="triangle"></div>
@@ -1545,7 +1590,7 @@
             <div class="coupon-btn btn _coupon-500"><p>получить купон на 500р</p></div>
         </div>
     </section>
-    <section class="" data-wow-duration="1s">
+    <section >
         <div class="container category">
             <div class="block-category">
                 <p>для неё</p>
@@ -1567,7 +1612,7 @@
             </div>
         </div>
     </section>
-    <section class="" data-wow-duration="1s">
+    <section >
         <div class="stock-container container">
             <div class="title-block">
                 <p>скидки на одежду</p>
@@ -1842,14 +1887,14 @@
             </div>
         </div>
     </section>
-    <section class="" data-wow-duration="1s">
+    <section >
         <iframe class="video-iframe" height="750px" src="https://www.youtube.com/embed/LZawF9zpoNc"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
     </section>
-    <section class="" data-wow-duration="1s">
+    <section >
         <div class="container container-about">
             <div class="title-block">
                 <p>о нас</p>
@@ -1923,7 +1968,7 @@
             </div>
         </div>
     </section>
-    <section class="" data-wow-duration="1s">
+    <section >
         <div class="container blog-container">
             <div class="title-block">
                 <p>наш блог</p>
@@ -2218,27 +2263,29 @@
                         <li><a href="job_openings.html">Вакансии</a></li>
                     </ul>
                 </nav>
-                <div class="social-bloc">
+                <div class="social-bloc modal-form">
                     <div class="footer-email-input">
-                        <input type="email" name="email" placeholder="ПОДПИСАТЬСЯ НА РАССЫЛКУ"
-                               class="email footer-email">
-                        <button type="submit">подписаться</button>
+                        <input type="hidden" name="mailing">
+                        <span>ПОДПИСАТЬСЯ НА РАССЫЛКУ</span>
+                        <input type="email" name="email" placeholder="Введите email"
+                               class="required email footer-email">
+                        <button type="submit" class="validation-btn">подписаться</button>
                     </div>
                     <div class="footer-social-links">
                         <p>#megahand</p>
                         <div class="social-links">
-                            <div class="social-links-item">
+                            <a href="" class="social-links-item">
                                 <img src="static/images/icons/ic-tel.png">
-                            </div>
-                            <div class="social-links-item">
+                            </a>
+                            <a href="" class="social-links-item">
                                 <img src="static/images/icons/ic-vk.png">
-                            </div>
-                            <div class="social-links-item">
+                            </a>
+                            <a href="" class="social-links-item">
                                 <img src="static/images/icons/ic-youtube.png">
-                            </div>
-                            <div class="social-links-item">
+                            </a>
+                            <a href="" class="social-links-item">
                                 <img src="static/images/icons/ic-odn.png">
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

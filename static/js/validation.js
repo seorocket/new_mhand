@@ -1,7 +1,5 @@
 // валидация форм на сайте
 $(document).ready(function () {
-// купоны
-
     let ajax_data = {
             name: '',
             phone: '',
@@ -41,6 +39,7 @@ $(document).ready(function () {
             advertising: 'cooperation-advertising',
             old_fabric: 'old-fabric',
             about: 'about',
+            mailing: 'mailing',
         }
 
     function validationData(data) {
@@ -145,7 +144,7 @@ $(document).ready(function () {
                     }
                 }
             }
-        } else if (data.type == form_types.advertising || data.type == form_types.about) {
+        } else if (data.type == form_types.advertising || data.type == form_types.about || data.type == form_types.mailing) {
             for (let item in data) {
                 if (item == 'name') {
                     if (data[item].val() == '') {
@@ -228,7 +227,7 @@ $(document).ready(function () {
         } else if (inputs.type == form_types.review) {
             inputs.email = $(this).parents('.modal-form').find('.required.email')
             inputs.review_text = $(this).parents('.modal-form').find('.required.review-text')
-        } else if (inputs.type == form_types.advertising || inputs.type == form_types.advertising || inputs.type == form_types.about) {
+        } else if (inputs.type == form_types.advertising || inputs.type == form_types.advertising || inputs.type == form_types.about || inputs.type == form_types.mailing) {
             inputs.email = $(this).parents('.modal-form').find('.required.email')
         } else if (inputs.type == form_types.old_fabric) {
             inputs.phone = $(this).parents('.modal-form').find('.required.phone')
@@ -272,4 +271,6 @@ $(document).ready(function () {
             $(this).removeClass('focused')
         }
     })
+
+//    ajax
 })

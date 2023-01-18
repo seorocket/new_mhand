@@ -124,6 +124,24 @@ $(document).ready(function () {
             })
         }
     })
+    $('.search-container.city .search-input').on('input', function () {
+        let temp = $(this).val()
+        if (temp) {
+            $('.body-select-city .select-city-content .select-city-content-item ').each(function () {
+                console.log(this)
+                if ($(this).attr('data-search').toLowerCase().indexOf(temp.toLowerCase()) > -1) {
+                    $(this).removeClass('d-none')
+                } else {
+                    $(this).addClass('d-none')
+                }
+            })
+        } else {
+            $('.container.brands-page-container .brands-section .brand-item').each(function () {
+                $(this).removeClass('d-none')
+            })
+        }
+    })
+
     $('.search-container.brands .search-btn-brands').on('click', function () {
         let input = $(this).prev(),
             temp = input.val()
@@ -266,6 +284,10 @@ $(document).ready(function () {
         $('#mainModal').modal('show')
     })
 
+    $('#select-city-header').on('click', function (){
+        $('#select-city').modal('show')
+    })
+
     $('.add-review-btn').on('click', function () {
         dNoneModal()
         $('.modal-content.main-modal').removeClass('__d-none-modal')
@@ -295,8 +317,9 @@ $(document).ready(function () {
         $('.mobile-sub-dropdown-trigger').toggleClass('active')
     })
 
-    $('.mobile-calendar-triger-section').click(() => {
+    $('.trigger-section-calendar').click(() => {
         $('.calendar-slide').toggleClass('slide')
+        $('.triangle-section').toggleClass('d-none')
     })
 
     function setPhotoDefault() {
@@ -315,6 +338,11 @@ $(document).ready(function () {
         $(window).scrollTop(top)
         $('.form-custom-input.name').focus()
     })
+//    #input-avatar
+
+    function upd_avatar() {
+        console.log(this)
+    }
 
 
 })

@@ -441,6 +441,7 @@
     .mobile-header .header-logo {
         max-width: 170px;
         height: auto;
+        padding: 20px 0;
     }
 
     .mobile-header .header-logo img {
@@ -532,6 +533,40 @@
 }
 
 @media screen and (max-width: 820px) {
+    .news-section{
+        padding-bottom: 200px;
+    }
+
+    .shops-data{
+        transform: none;
+        top: -150px;
+    }
+
+    .calendar-section .calendar, .mobile-calendar-section{
+        z-index: 4;
+    }
+
+    .ya-share2__container_size_s.ya-share2__container_alone .ya-share2__popup_direction_bottom, .ya-share2__container_size_s .ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__popup_direction_bottom{
+        top: -10px !important;
+    }
+
+    .ya-share2.ya-share2_inited{
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: rotate(90deg);
+        z-index: 9999;
+    }
+
+    .big-calendar .ya-share2.ya-share2_inited{
+        transform: none;
+    }
+
+    .mobile-calendar-triger-section{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 18px;
+    }
 
     .collapse-btn-blog{
         display: flex;
@@ -844,9 +879,10 @@
     }
 
     .video-iframe {
-        width: 90vw;
+        width: 100vw;
         margin: 0 auto;
         display: block;
+        height: auto;
     }
 
     .btn.coupon-btn {
@@ -1005,7 +1041,7 @@
     }
 
     .mobile-calendar-trigger {
-        left: -24vw;
+        left: -34vw;
     }
 
     .big-calendar-date-section.stocks {
@@ -1106,5 +1142,11 @@
 
     .mobile-calendar-share {
         left: 4px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mobile-calendar-trigger {
+        left: -50vw;
     }
 }
